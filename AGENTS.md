@@ -1,22 +1,110 @@
-## Development
+# Crafty Development Guide
 
-When starting the dev server, use background mode:
+Crafty is an arts-and-crafts ecommerce website.
 
-```
-astro dev --background
-```
+## Project Architecture
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+- Astro is the primary framework.
+- Svelte is available for interactive UI.
+- Do not use Svelte automatically for static content that Astro can handle.
+- Tailwind CSS is available for styling.
+- pnpm is the package manager.
+- The development environment is provided through Nix and direnv.
 
-## Documentation
+## Code Style
 
-Full documentation: https://docs.astro.build
+Keep the code understandable to a human developer who is still learning and
+maintaining the project directly.
 
-Consult these guides before working on related tasks:
+Prefer:
 
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+- simple components
+- explicit markup
+- descriptive names
+- straightforward control flow
+- small, focused files
+- comments when they explain a non-obvious decision
+
+Avoid:
+
+- premature abstraction
+- unnecessary utility layers
+- overly generic component systems
+- clever code that saves lines but reduces readability
+- introducing a dependency for something simple enough to implement directly
+
+A component should have a clear reason to exist.
+
+## Astro and Svelte
+
+Use Astro for:
+
+- pages
+- layouts
+- static content
+- primarily presentational components
+
+Use Svelte when browser-side interactivity genuinely requires it.
+
+Do not turn the site into a client-side Svelte application without a specific
+reason.
+
+## Business Information
+
+Never invent:
+
+- products
+- product descriptions
+- prices
+- inventory
+- addresses
+- contact information
+- shipping policies
+- return policies
+- business policies
+- customer testimonials
+
+Use placeholders or ask for missing information instead.
+
+## Ecommerce
+
+Do not add or configure any of the following without explicit instruction:
+
+- Shopify
+- payment processing
+- checkout systems
+- customer accounts
+- databases
+- authentication
+- inventory integrations
+- backend services
+
+## Privacy and Analytics
+
+Do not add:
+
+- analytics
+- advertising trackers
+- telemetry
+- marketing pixels
+- third-party tracking scripts
+
+unless explicitly instructed.
+
+## Dependencies
+
+Do not add dependencies without a concrete reason.
+
+Prefer the tools already present in the repository before introducing another
+package.
+
+## Deployment
+
+Do not modify hosting, deployment, domains, DNS, CI/CD, or production
+configuration unless explicitly instructed.
+
+## Git
+
+Do not commit or push changes unless explicitly instructed.
+
+Keep changes narrowly scoped and easy to review.

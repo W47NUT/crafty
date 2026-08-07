@@ -1,5 +1,5 @@
 {
-  "name": "crafty-astro",
+  "name": "crafty",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -9,12 +9,22 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/svelte": "^9.0.1",
     "astro": "^7.2.0",
     "svelte": "^5.56.8",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-svelte": "^4.1.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3"
   }
 }
