@@ -60,6 +60,14 @@ const makingCategories = [
   id="selected-work"
   aria-labelledby="portfolio-heading"
 >
+  <img
+    class="portfolio-ornament"
+    src="/images/brand/breezys-botanical-edge.png"
+    alt=""
+    width="524"
+    height="719"
+    loading="lazy"
+  />
   <div class="portfolio-heading">
     <div>
       <p class="section-eyebrow">Selected work</p>
@@ -114,9 +122,14 @@ const makingCategories = [
   id="commissions"
   aria-labelledby="commission-heading"
 >
-  <div class="commission-mark" aria-hidden="true">
-    <span>Custom</span>
-  </div>
+  <img
+    class="commission-medallion"
+    src="/images/brand/breezys-commission-medallion.png"
+    alt=""
+    width="1000"
+    height="1000"
+    loading="lazy"
+  />
   <div class="commission-copy">
     <p class="section-eyebrow">Made for you</p>
     <h2 id="commission-heading">Bring an idea to the studio.</h2>
@@ -135,6 +148,14 @@ const makingCategories = [
       <span>Portrait or studio photo</span>
     </div>
   </div>
+  <img
+    class="about-bird"
+    src="/images/brand/breezys-bird-accent.png"
+    alt=""
+    width="274"
+    height="343"
+    loading="lazy"
+  />
   <div class="about-copy">
     <p class="section-eyebrow">Behind the work</p>
     <h2 id="about-heading">Meet Bre</h2>
@@ -270,8 +291,27 @@ const makingCategories = [
   }
 
   .portfolio-section {
+    position: relative;
     padding-block: clamp(5rem, 9vw, 9rem);
     border-top: 1px solid var(--color-border);
+    overflow: clip;
+  }
+
+  .portfolio-ornament {
+    position: absolute;
+    z-index: 0;
+    right: -2rem;
+    bottom: -3rem;
+    width: clamp(7.5rem, 8vw, 9rem);
+    height: auto;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  .portfolio-heading,
+  .portfolio-grid {
+    position: relative;
+    z-index: 1;
   }
 
   .portfolio-heading {
@@ -391,40 +431,10 @@ const makingCategories = [
     gap: clamp(3rem, 9vw, 10rem);
   }
 
-  .commission-mark {
-    position: relative;
-    display: grid;
+  .commission-medallion {
     width: min(100%, 29rem);
-    aspect-ratio: 1;
-    place-items: center;
-    border: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
-    border-radius: 50%;
-  }
-
-  .commission-mark::before,
-  .commission-mark::after {
-    position: absolute;
-    width: min(22vw, 16rem);
-    height: 1px;
-    background: var(--color-gold);
-    content: "";
-  }
-
-  .commission-mark::before {
-    transform: rotate(45deg);
-  }
-
-  .commission-mark::after {
-    transform: rotate(-45deg);
-  }
-
-  .commission-mark span {
-    z-index: 1;
-    padding: 0.75rem 1rem;
-    background: var(--color-blush-soft);
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    font-style: italic;
+    height: auto;
+    justify-self: center;
   }
 
   .commission-copy {
@@ -459,6 +469,7 @@ const makingCategories = [
   }
 
   .about-section {
+    position: relative;
     display: grid;
     grid-template-columns: minmax(20rem, 0.9fr) minmax(0, 1.1fr);
     align-items: center;
@@ -476,6 +487,16 @@ const makingCategories = [
 
   .about-copy {
     max-width: 42rem;
+  }
+
+  .about-bird {
+    position: absolute;
+    top: calc(50% - 11rem);
+    right: 1rem;
+    width: clamp(4.5rem, 5.5vw, 6rem);
+    height: auto;
+    opacity: 0.48;
+    pointer-events: none;
   }
 
   .about-copy > p {
@@ -500,14 +521,13 @@ const makingCategories = [
       max-width: 48rem;
     }
 
-    .commission-mark {
+    .commission-medallion {
       width: min(65vw, 24rem);
-      justify-self: center;
     }
 
-    .commission-mark::before,
-    .commission-mark::after {
-      width: min(38vw, 14rem);
+    .portfolio-ornament,
+    .about-bird {
+      display: none;
     }
 
     .about-image {
@@ -573,7 +593,7 @@ const makingCategories = [
       padding-inline: 1rem;
     }
 
-    .commission-mark {
+    .commission-medallion {
       width: min(75vw, 20rem);
     }
 
