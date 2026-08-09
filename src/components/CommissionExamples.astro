@@ -1,0 +1,156 @@
+<section class="commission-examples" aria-labelledby="examples-heading">
+  <div class="examples-heading">
+    <p class="section-label">01 / Possibilities</p>
+    <div>
+      <h2 id="examples-heading">What can begin as a commission.</h2>
+      <p>
+        Custom shirts and paintings are the clearest places to begin. Each
+        inquiry starts with the idea rather than a fixed catalog.
+      </p>
+    </div>
+  </div>
+
+  <div class="example-list">
+    <article>
+      <p>01</p>
+      <h3>Custom shirts</h3>
+      <span>An idea discussed directly with Bre.</span>
+    </article>
+    <article>
+      <p>02</p>
+      <h3>Paintings</h3>
+      <span>A starting point for a custom-work conversation.</span>
+    </article>
+  </div>
+
+  <aside>
+    <p>Across the practice</p>
+    <span>
+      Bre also works with molded resin pieces, D&amp;D dice, beach-sand and
+      shell coasters, and bead bracelets. An inquiry can start a conversation,
+      but not every medium or idea will necessarily be a commission fit.
+    </span>
+  </aside>
+</section>
+
+<style>
+  .commission-examples {
+    padding: clamp(5rem, 9vw, 10rem)
+      max(1.5rem, calc((100% - var(--page-width)) / 2));
+    background: var(--color-cream);
+  }
+
+  .examples-heading {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  .section-label,
+  aside > p,
+  article > p {
+    margin: 0;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 55rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.5vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .examples-heading div > p {
+    max-width: 39rem;
+    margin: 2rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .example-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    margin-top: clamp(4rem, 8vw, 8rem);
+    border-top: 1px solid var(--color-border);
+  }
+
+  article {
+    min-width: 0;
+    padding: clamp(2.5rem, 5vw, 5.5rem) clamp(1.5rem, 5vw, 5rem)
+      clamp(3rem, 6vw, 6rem) 0;
+  }
+
+  article + article {
+    padding-left: clamp(1.5rem, 5vw, 5rem);
+    border-left: 1px solid var(--color-border);
+  }
+
+  h3 {
+    margin: clamp(2rem, 4vw, 4rem) 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.7rem, 5vw, 5.75rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  article span {
+    display: block;
+    max-width: 27rem;
+    margin-top: 1.5rem;
+    color: var(--color-charcoal);
+  }
+
+  aside {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-gold);
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  aside span {
+    display: block;
+    max-width: 54rem;
+    color: var(--color-charcoal);
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 2.25vw, 2.3rem);
+    line-height: 1.45;
+  }
+
+  @media (max-width: 52rem) {
+    .examples-heading,
+    aside {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .commission-examples {
+      padding-inline: 1rem;
+    }
+
+    .example-list {
+      grid-template-columns: 1fr;
+    }
+
+    article,
+    article + article {
+      padding: 3rem 0;
+    }
+
+    article + article {
+      border-top: 1px solid var(--color-border);
+      border-left: 0;
+    }
+  }
+</style>

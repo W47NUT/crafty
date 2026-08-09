@@ -1,0 +1,147 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Share the idea",
+    description: "Tell Bre what you are hoping to create.",
+  },
+  {
+    number: "02",
+    title: "Talk through the details",
+    description:
+      "Discuss the project to determine what is practical and what information is still needed.",
+  },
+  {
+    number: "03",
+    title: "Decide the next step",
+    description:
+      "If the project is a fit, the remaining details can be worked out directly.",
+  },
+];
+---
+
+<section class="commission-process" aria-labelledby="process-heading">
+  <div class="process-intro">
+    <p>02 / The process</p>
+    <h2 id="process-heading">How it starts.</h2>
+  </div>
+
+  <ol>
+    {
+      steps.map((step) => (
+        <li>
+          <span>{step.number}</span>
+          <h3>{step.title}</h3>
+          <p>{step.description}</p>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<style>
+  .commission-process {
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    padding-block: clamp(6rem, 10vw, 11rem);
+  }
+
+  .process-intro {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  .process-intro p,
+  li > span {
+    margin: 0;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 6vw, 6.75rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+
+  ol {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: clamp(4rem, 8vw, 8rem) 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-border);
+    list-style: none;
+  }
+
+  li {
+    min-width: 0;
+    padding: 2rem clamp(1.5rem, 4vw, 4rem) 0 0;
+  }
+
+  li + li {
+    padding-left: clamp(1.5rem, 4vw, 4rem);
+    border-left: 1px solid var(--color-border);
+  }
+
+  h3 {
+    max-width: 19rem;
+    margin: clamp(3rem, 5vw, 5rem) 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3.25rem);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+
+  li p {
+    max-width: 26rem;
+    margin: 1.5rem 0 0;
+    color: var(--color-charcoal);
+    line-height: 1.75;
+  }
+
+  @media (max-width: 52rem) {
+    .process-intro {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    ol {
+      grid-template-columns: 1fr;
+    }
+
+    li,
+    li + li {
+      display: grid;
+      grid-template-columns: 4rem minmax(0, 1fr);
+      padding: 2rem 0 3rem;
+      border-left: 0;
+    }
+
+    li + li {
+      border-top: 1px solid var(--color-border);
+    }
+
+    h3,
+    li p {
+      grid-column: 2;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .commission-process {
+      width: min(100% - 2rem, var(--page-width));
+    }
+  }
+</style>

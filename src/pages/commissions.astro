@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CommissionExamples from "../components/CommissionExamples.astro";
+import CommissionInquiry from "../components/CommissionInquiry.astro";
+import CommissionIntro from "../components/CommissionIntro.astro";
+import CommissionProcess from "../components/CommissionProcess.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+---
+
+<BaseLayout
+  title="Commissions | Breezy's Creative Co."
+  description="Begin a conversation with Breezy's Creative Co. about custom shirts, paintings, and custom work."
+>
+  <SiteHeader />
+  <main id="main-content">
+    <CommissionIntro />
+    <CommissionExamples />
+    <CommissionProcess />
+    <CommissionInquiry />
+  </main>
+  <SiteFooter />
+</BaseLayout>
