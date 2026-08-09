@@ -1,0 +1,209 @@
+---
+const portfolioPieces = [
+  {
+    className: "gallery-piece-feature",
+    src: "/images/work/sugar-spice-tote.webp",
+    alt: 'Tote bag decorated with a "Sugar Spice & Everything Nice" design',
+    width: 2235,
+    height: 2023,
+    label: "Handmade Tote",
+  },
+  {
+    className: "gallery-piece-tall",
+    src: "/images/work/psalm-shirt.webp",
+    alt: "White shirt with a floral cross design arranged with flowers and an open book",
+    width: 3000,
+    height: 2259,
+    label: "Custom Shirt",
+  },
+  {
+    className: "gallery-piece-small",
+    src: "/images/work/proverbs-shirt.webp",
+    alt: "White shirt with a blue cross and text design arranged with books and necklaces",
+    width: 1547,
+    height: 1314,
+    label: "Custom Shirt",
+  },
+  {
+    className: "gallery-piece-wide",
+    src: "/images/work/beauty-pouch.webp",
+    alt: "Decorated cosmetic pouch arranged with a flower and beauty items",
+    width: 3000,
+    height: 2259,
+    label: "Decorated Pouch",
+  },
+];
+---
+
+<section class="portfolio-gallery" aria-label="Portfolio work">
+  <div class="gallery-rule" aria-hidden="true">
+    <span>01</span>
+    <span>Finished work</span>
+  </div>
+
+  <div class="gallery-layout">
+    {
+      portfolioPieces.map((piece) => (
+        <figure class:list={["gallery-piece", piece.className]}>
+          <div class="image-frame">
+            <img
+              src={piece.src}
+              alt={piece.alt}
+              width={piece.width}
+              height={piece.height}
+              loading="lazy"
+            />
+          </div>
+          <figcaption>{piece.label}</figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .portfolio-gallery {
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    padding-bottom: clamp(6rem, 11vw, 12rem);
+  }
+
+  .gallery-rule {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-charcoal);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .gallery-layout {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: start;
+    margin-top: clamp(3rem, 6vw, 6.5rem);
+    row-gap: clamp(5rem, 10vw, 11rem);
+  }
+
+  .gallery-piece {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .gallery-piece-feature {
+    grid-column: 1 / span 7;
+  }
+
+  .gallery-piece-tall {
+    grid-column: 9 / span 4;
+    margin-top: clamp(5rem, 11vw, 12rem);
+  }
+
+  .gallery-piece-small {
+    grid-column: 2 / span 4;
+  }
+
+  .gallery-piece-wide {
+    grid-column: 7 / span 6;
+    margin-top: clamp(6rem, 10vw, 10rem);
+  }
+
+  .image-frame {
+    padding: clamp(0.45rem, 0.8vw, 0.8rem);
+    border: 1px solid var(--color-border);
+    background: var(--color-cream);
+    box-shadow: 0 1.5rem 3rem rgb(55 45 34 / 6%);
+  }
+
+  .gallery-piece-feature .image-frame {
+    transform: rotate(-0.25deg);
+  }
+
+  .gallery-piece-tall .image-frame {
+    transform: rotate(0.35deg);
+  }
+
+  .image-frame img {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  figcaption::before {
+    width: 1.75rem;
+    height: 1px;
+    background: var(--color-gold);
+    content: "";
+  }
+
+  @media (max-width: 62rem) {
+    .gallery-layout {
+      row-gap: 5rem;
+    }
+
+    .gallery-piece-feature {
+      grid-column: 1 / span 8;
+    }
+
+    .gallery-piece-tall {
+      grid-column: 9 / span 4;
+      margin-top: 6rem;
+    }
+
+    .gallery-piece-small {
+      grid-column: 1 / span 5;
+    }
+
+    .gallery-piece-wide {
+      grid-column: 6 / span 7;
+      margin-top: 4rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .portfolio-gallery {
+      width: min(100% - 2rem, var(--page-width));
+    }
+
+    .gallery-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .gallery-piece,
+    .gallery-piece-tall,
+    .gallery-piece-wide {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    .gallery-piece-tall,
+    .gallery-piece-small {
+      width: 88%;
+    }
+
+    .gallery-piece-tall {
+      align-self: flex-end;
+    }
+
+    .image-frame {
+      padding: 0.4rem;
+    }
+  }
+</style>

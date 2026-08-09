@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PortfolioClosing from "../components/PortfolioClosing.astro";
+import PortfolioGallery from "../components/PortfolioGallery.astro";
+import PortfolioIntro from "../components/PortfolioIntro.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+---
+
+<BaseLayout
+  title="Portfolio | Breezy's Creative Co."
+  description="Selected finished work from across Breezy's Creative Co.'s creative practice."
+>
+  <SiteHeader />
+  <main id="main-content">
+    <PortfolioIntro />
+    <PortfolioGallery />
+    <PortfolioClosing />
+  </main>
+  <SiteFooter />
+</BaseLayout>

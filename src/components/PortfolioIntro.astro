@@ -1,0 +1,72 @@
+<section class="portfolio-intro" aria-labelledby="portfolio-title">
+  <p class="portfolio-eyebrow">Selected work</p>
+  <div class="intro-layout">
+    <h1 id="portfolio-title">Made by hand,<br />one piece at a time.</h1>
+    <p>
+      A selection of finished work from across Breezy's Creative Co.'s current
+      creative practice. These pieces show a growing range of custom and
+      handmade work; they are presented here as a portfolio, not a catalog.
+    </p>
+  </div>
+</section>
+
+<style>
+  .portfolio-intro {
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    padding-block: clamp(5rem, 10vw, 10rem) clamp(4rem, 8vw, 8rem);
+  }
+
+  .portfolio-eyebrow {
+    margin: 0 0 clamp(1.5rem, 3vw, 3rem);
+    color: var(--color-charcoal);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .intro-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(18rem, 0.5fr);
+    align-items: end;
+    gap: clamp(3rem, 9vw, 10rem);
+  }
+
+  h1 {
+    max-width: 66rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3.6rem, 7.2vw, 8.5rem);
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    line-height: 0.92;
+  }
+
+  .intro-layout p {
+    max-width: 31rem;
+    margin: 0 0 0.35rem;
+    color: var(--color-charcoal);
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    line-height: 1.8;
+  }
+
+  @media (max-width: 62rem) {
+    .intro-layout {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .portfolio-intro {
+      width: min(100% - 2rem, var(--page-width));
+      padding-block: 4.5rem 4rem;
+    }
+
+    h1 {
+      font-size: clamp(3.25rem, 15vw, 5rem);
+      line-height: 0.95;
+    }
+  }
+</style>

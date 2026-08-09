@@ -1,0 +1,117 @@
+<section class="portfolio-closing" aria-labelledby="practice-heading">
+  <div class="practice-note">
+    <p class="section-number">02 / The practice</p>
+    <div>
+      <h2 id="practice-heading">The work continues beyond this folio.</h2>
+      <p>
+        Bre's current creative practice also includes shirts, paintings, molded
+        resin pieces, D&amp;D dice, beach-sand and shell coasters, and bead
+        bracelets. Not every part of that practice has been photographed for the
+        portfolio yet.
+      </p>
+    </div>
+  </div>
+
+  <div class="commission-invitation">
+    <p class="section-number">Custom work</p>
+    <div>
+      <h2>Have a piece in mind?</h2>
+      <p>
+        Share what you are considering and begin a conversation about custom
+        work with Breezy's Creative Co.
+      </p>
+      <a href="/#commissions">Request a commission</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-closing {
+    background: var(--color-cream);
+  }
+
+  .practice-note,
+  .commission-invitation {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  .practice-note {
+    padding-block: clamp(5rem, 9vw, 9rem);
+  }
+
+  .section-number {
+    margin: 0.35rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 52rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 5vw, 5.6rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+
+  .practice-note div > p,
+  .commission-invitation div > p {
+    max-width: 44rem;
+    margin: 2rem 0 0;
+    color: var(--color-charcoal);
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    line-height: 1.8;
+  }
+
+  .commission-invitation {
+    padding-block: clamp(5rem, 8vw, 8rem);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .commission-invitation h2 {
+    font-size: clamp(3rem, 6vw, 7rem);
+  }
+
+  .commission-invitation a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+    margin-top: 2.25rem;
+    padding: 0.9rem 1.4rem;
+    border: 1px solid var(--color-ink);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .commission-invitation a:hover {
+    color: var(--color-cream);
+    background: var(--color-ink);
+  }
+
+  @media (max-width: 52rem) {
+    .practice-note,
+    .commission-invitation {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .practice-note,
+    .commission-invitation {
+      width: min(100% - 2rem, var(--page-width));
+    }
+  }
+</style>
