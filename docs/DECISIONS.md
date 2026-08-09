@@ -32,3 +32,12 @@
 - The current visual direction is a restrained, editorial maker/atelier style
   informed by the official botanical scissors logo, with neutral foundations
   that allow the artwork itself to provide much of the color.
+
+- The updated Breezy's Creative Co. homepage wireframe is approved as the current
+  visual direction.
+- The approved homepage hierarchy is Header, Hero, Selected Work, Commissions,
+  Shop Preview, About Bre, and Footer.
+- Portfolio presentation intentionally precedes the Shop on the homepage.
+- The visual system will use a warm neutral editorial foundation, layered real
+  photography, botanical/scissors influences from the official logo, and clear
+  conventional storefront interactions.
