@@ -1,1 +1,72 @@
 @import "tailwindcss";
+
+:root {
+  --color-paper: #f5f0e6;
+  --color-cream: #fbf8f1;
+  --color-ink: #201f1c;
+  --color-charcoal: #55514a;
+  --color-taupe: #a99c8c;
+  --color-border: #d8cfc1;
+
+  --font-display: Georgia, "Times New Roman", Times, serif;
+  --font-body:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --page-width: 100rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+  margin: 0;
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+  background-image: linear-gradient(
+    110deg,
+    rgb(255 255 255 / 12%),
+    transparent 45%,
+    rgb(86 70 51 / 2%)
+  );
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-ink);
+  background: var(--color-cream);
+  font-weight: 700;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

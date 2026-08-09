@@ -1,10 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SiteHeader from "../components/SiteHeader.astro";
 ---
 
-<BaseLayout title="Crafty" description="Crafty website in development.">
-  <main>
-    <h1>Crafty</h1>
-    <p>Website in development.</p>
+<BaseLayout
+  title="Breezy's Creative Co."
+  description="Original art, custom work, and handmade pieces by Breezy's Creative Co."
+>
+  <SiteHeader />
+  <main id="main-content">
+    <HeroSection />
   </main>
 </BaseLayout>

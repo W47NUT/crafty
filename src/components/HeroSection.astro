@@ -1,0 +1,321 @@
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-copy">
+    <p class="eyebrow">Artist · Maker · Custom work</p>
+    <h1 id="hero-heading">
+      <span class="headline-line">Original art,</span>
+      <span class="headline-line"> custom work,</span>
+      <span class="headline-line"> and handmade</span>
+      <span class="headline-line"> pieces.</span>
+    </h1>
+    <p class="introduction">
+      Explore Breezy's work, browse ready-made pieces, or start a conversation
+      about something made just for you.
+    </p>
+    <div class="hero-actions">
+      <a class="primary-action" href="#selected-work">Explore the Work</a>
+      <a class="secondary-action" href="#commissions">Request a Commission</a>
+    </div>
+  </div>
+
+  <div
+    class="hero-collage"
+    aria-label="Reserved space for photographs of Breezy's work"
+  >
+    <!-- Each placeholder can be replaced directly with an img when approved photography is available. -->
+    <div class="photo-frame photo-frame-tall">
+      <div class="photo-placeholder" aria-hidden="true">
+        <span>Artwork photo</span>
+      </div>
+    </div>
+    <div class="photo-frame photo-frame-wide">
+      <div class="photo-placeholder" aria-hidden="true">
+        <span>Artwork photo</span>
+      </div>
+    </div>
+    <div class="photo-frame photo-frame-small">
+      <div class="photo-placeholder" aria-hidden="true">
+        <span>Artwork photo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.94fr) minmax(30rem, 1.06fr);
+    align-items: center;
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    padding: clamp(2.25rem, 3.5vw, 4rem) 0 clamp(4.5rem, 7vw, 7rem);
+    gap: clamp(1.5rem, 3.5vw, 4rem);
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 43rem;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    margin: 0 0 1.5rem;
+    color: var(--color-charcoal);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow::before {
+    width: 2.75rem;
+    height: 1px;
+    margin-right: 1rem;
+    background: var(--color-taupe);
+    content: "";
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3.4rem, 5.4vw, 6.4rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.94;
+  }
+
+  .headline-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .introduction {
+    max-width: 38rem;
+    margin: 2rem 0 0;
+    color: var(--color-charcoal);
+    font-size: clamp(1rem, 1.35vw, 1.18rem);
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2.25rem;
+    gap: 1rem 1.75rem;
+  }
+
+  .hero-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.25rem;
+    padding: 0.75rem 1.4rem;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .primary-action {
+    border: 1px solid var(--color-ink);
+    color: var(--color-cream);
+    background: var(--color-ink);
+  }
+
+  .primary-action:hover {
+    color: var(--color-ink);
+    background: transparent;
+  }
+
+  .secondary-action {
+    border-bottom: 1px solid var(--color-ink);
+  }
+
+  .secondary-action:hover {
+    background: var(--color-cream);
+  }
+
+  .hero-collage {
+    position: relative;
+    width: calc(100% + clamp(0rem, 2vw, 2rem));
+    min-height: clamp(37rem, 50vw, 47rem);
+    margin-left: clamp(-1.5rem, -1.5vw, -0.5rem);
+  }
+
+  .hero-collage::before {
+    position: absolute;
+    top: 6%;
+    right: 2%;
+    width: 86%;
+    height: 86%;
+    border: 1px solid var(--color-border);
+    content: "";
+  }
+
+  .photo-frame {
+    position: absolute;
+    padding: clamp(0.5rem, 0.9vw, 0.8rem);
+    border: 1px solid var(--color-border);
+    background: var(--color-cream);
+    box-shadow: 0 1rem 2.5rem rgb(55 45 34 / 10%);
+  }
+
+  .photo-placeholder {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    overflow: hidden;
+    color: var(--color-charcoal);
+    background:
+      linear-gradient(
+        145deg,
+        transparent 0 48%,
+        rgb(91 78 63 / 7%) 48% 49%,
+        transparent 49%
+      ),
+      linear-gradient(35deg, var(--color-border), var(--color-cream));
+  }
+
+  .photo-placeholder span {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-taupe);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 0.06em;
+  }
+
+  .photo-frame-tall {
+    z-index: 1;
+    top: 0;
+    right: 1%;
+    width: 62%;
+    height: 74%;
+    transform: rotate(1.4deg);
+  }
+
+  .photo-frame-wide {
+    z-index: 2;
+    bottom: 1%;
+    left: 0;
+    width: 62%;
+    height: 46%;
+    transform: rotate(-1.8deg);
+  }
+
+  .photo-frame-small {
+    z-index: 3;
+    right: 0;
+    bottom: 7%;
+    width: 38%;
+    height: 37%;
+    transform: rotate(2.2deg);
+  }
+
+  @media (max-width: 62rem) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      gap: clamp(2.75rem, 6vw, 3.5rem);
+    }
+
+    .hero-copy {
+      max-width: 48rem;
+    }
+
+    .hero-collage {
+      width: min(100%, 42rem);
+      min-height: 34rem;
+      margin-inline: auto;
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .hero {
+      width: min(100% - 2rem, var(--page-width));
+      padding-block: clamp(2.75rem, 11vw, 3.5rem) 4rem;
+      gap: 2.5rem;
+    }
+
+    .eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      max-width: 100%;
+      font-size: clamp(2.7rem, 12.5vw, 3.75rem);
+      letter-spacing: -0.035em;
+      line-height: 0.98;
+    }
+
+    .headline-line {
+      display: inline;
+      white-space: normal;
+    }
+
+    .hero-actions {
+      align-items: stretch;
+      flex-direction: column;
+      margin-top: 1.75rem;
+    }
+
+    .hero-actions a {
+      width: 100%;
+    }
+
+    .introduction {
+      margin-top: 1.5rem;
+      line-height: 1.65;
+    }
+
+    .secondary-action {
+      border: 1px solid var(--color-ink);
+    }
+
+    .hero-collage {
+      width: min(100%, 30rem);
+      min-height: clamp(23rem, 118vw, 28rem);
+    }
+
+    .hero-collage::before {
+      top: 6%;
+      right: 2%;
+      width: 90%;
+      height: 84%;
+    }
+
+    .photo-frame-tall {
+      right: 4%;
+      width: 62%;
+      height: 66%;
+      transform: rotate(0.7deg);
+    }
+
+    .photo-frame-wide {
+      bottom: 3%;
+      left: 3%;
+      width: 61%;
+      height: 40%;
+      transform: rotate(-0.8deg);
+    }
+
+    .photo-frame-small {
+      right: 3%;
+      bottom: 8%;
+      width: 36%;
+      height: 31%;
+      transform: rotate(0.9deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .photo-frame {
+      transform: none;
+    }
+  }
+</style>
