@@ -1,0 +1,194 @@
+<footer class="site-footer" id="contact">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="/" aria-label="Breezy's Creative Co. home">
+        <img
+          src="/images/brand/breezys-logo.png"
+          alt="Breezy's Creative Co."
+          width="220"
+          height="150"
+        />
+      </a>
+      <p>Original art, custom work, and handmade pieces.</p>
+    </div>
+
+    <nav class="footer-navigation" aria-label="Footer navigation">
+      <div>
+        <p>Explore</p>
+        <a href="#selected-work">Portfolio</a>
+        <a href="#commissions">Commissions</a>
+        <a href="#about">About Bre</a>
+      </div>
+      <div>
+        <p>Connect</p>
+        <a href="#contact">Contact</a>
+        <a href="#commissions">Custom-work inquiries</a>
+      </div>
+    </nav>
+
+    <div class="newsletter-placeholder">
+      <p class="newsletter-heading">Studio notes</p>
+      <p>Newsletter signup is not available yet.</p>
+      <div class="newsletter-field" aria-hidden="true">
+        <span>Email signup coming soon</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Breezy's Creative Co.</p>
+    <a href="#main-content">Back to top</a>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: clamp(4rem, 7vw, 7rem)
+      max(1.5rem, calc((100% - var(--page-width)) / 2)) 2rem;
+    color: var(--color-cream);
+    background: var(--color-ink);
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: minmax(14rem, 0.8fr) minmax(20rem, 1.1fr) minmax(
+        17rem,
+        0.9fr
+      );
+    gap: clamp(3rem, 7vw, 8rem);
+  }
+
+  .footer-brand a {
+    display: block;
+    width: min(100%, 11rem);
+    padding: 0.35rem;
+    background: var(--color-cream);
+  }
+
+  .footer-brand img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-brand p {
+    max-width: 20rem;
+    margin: 1.5rem 0 0;
+    color: var(--color-border);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.55;
+  }
+
+  .footer-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .footer-navigation div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-navigation p,
+  .newsletter-heading {
+    margin: 0 0 1.25rem;
+    color: var(--color-taupe);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .footer-navigation a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    color: var(--color-border);
+    text-decoration: none;
+  }
+
+  .footer-navigation a:hover {
+    color: var(--color-cream);
+    text-decoration: underline;
+    text-underline-offset: 0.35rem;
+  }
+
+  .newsletter-placeholder > p:not(.newsletter-heading) {
+    margin: 0;
+    color: var(--color-border);
+  }
+
+  .newsletter-field {
+    display: flex;
+    align-items: center;
+    min-height: 3.25rem;
+    margin-top: 1.5rem;
+    padding-inline: 1rem;
+    border: 1px solid var(--color-charcoal);
+    color: var(--color-taupe);
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: clamp(4rem, 7vw, 7rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-charcoal);
+    color: var(--color-taupe);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  .footer-bottom a {
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-border);
+    text-decoration: none;
+  }
+
+  .footer-bottom a:hover {
+    color: var(--color-cream);
+  }
+
+  @media (max-width: 62rem) {
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .newsletter-placeholder {
+      grid-column: 1 / 3;
+      max-width: 34rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .site-footer {
+      padding-inline: 1rem;
+    }
+
+    .footer-main,
+    .footer-navigation {
+      grid-template-columns: 1fr;
+    }
+
+    .newsletter-placeholder {
+      grid-column: auto;
+    }
+
+    .footer-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

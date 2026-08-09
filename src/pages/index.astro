@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroSection from "../components/HeroSection.astro";
+import HomepageContent from "../components/HomepageContent.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 ---
 
@@ -11,5 +13,7 @@ import SiteHeader from "../components/SiteHeader.astro";
   <SiteHeader />
   <main id="main-content">
     <HeroSection />
+    <HomepageContent />
   </main>
+  <SiteFooter />
 </BaseLayout>
