@@ -1,0 +1,114 @@
+<section class="about-closing" aria-labelledby="closing-heading">
+  <div class="closing-rule" aria-hidden="true">
+    <span>03</span>
+    <span>Continue exploring</span>
+  </div>
+
+  <div class="closing-content">
+    <h2 id="closing-heading">See what has been made—or begin something new.</h2>
+    <div class="closing-actions">
+      <a class="primary-link" href="/portfolio">View portfolio</a>
+      <a class="secondary-link" href="/commissions">Request a commission</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-closing {
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    padding-block: clamp(6rem, 11vw, 12rem);
+  }
+
+  .closing-rule {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-charcoal);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .closing-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.65fr);
+    align-items: end;
+    margin-top: clamp(3rem, 6vw, 6rem);
+    gap: clamp(3rem, 8vw, 9rem);
+  }
+
+  h2 {
+    max-width: 67rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 6.3vw, 7rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.98;
+  }
+
+  .closing-actions {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .closing-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid var(--color-ink);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .primary-link {
+    color: var(--color-cream);
+    background: var(--color-ink);
+  }
+
+  .primary-link:hover {
+    color: var(--color-ink);
+    background: transparent;
+  }
+
+  .secondary-link:hover {
+    color: var(--color-cream);
+    background: var(--color-ink);
+  }
+
+  @media (max-width: 52rem) {
+    .closing-content {
+      grid-template-columns: 1fr;
+    }
+
+    .closing-actions {
+      width: min(100%, 28rem);
+      flex-direction: row;
+    }
+
+    .closing-actions a {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .about-closing {
+      width: min(100% - 2rem, var(--page-width));
+    }
+
+    .closing-actions {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+</style>

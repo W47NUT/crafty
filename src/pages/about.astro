@@ -1,0 +1,21 @@
+---
+import AboutClosing from "../components/AboutClosing.astro";
+import AboutIntro from "../components/AboutIntro.astro";
+import AboutPractice from "../components/AboutPractice.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About Bre | Breezy's Creative Co."
+  description="Meet Bre, the artist and maker behind the home-based creative practice Breezy's Creative Co."
+>
+  <SiteHeader />
+  <main id="main-content">
+    <AboutIntro />
+    <AboutPractice />
+    <AboutClosing />
+  </main>
+  <SiteFooter />
+</BaseLayout>

@@ -1,0 +1,171 @@
+---
+const practiceAreas = [
+  "Heat-transfer-vinyl shirts",
+  "Paintings",
+  "Molded resin work",
+  "D&D dice",
+  "Sand-and-shell coasters",
+  "Bead bracelets",
+];
+---
+
+<section class="about-practice" aria-labelledby="practice-heading">
+  <div class="practice-intro">
+    <p class="section-label">01 / The practice</p>
+    <div>
+      <h2 id="practice-heading">Different materials. One maker's hand.</h2>
+      <p>
+        Breezy's Creative Co. moves between wearable pieces, painting, resin,
+        and small handmade objects. The range is part of the practice; it is not
+        a promise that every piece is continuously for sale or available as a
+        commission.
+      </p>
+    </div>
+  </div>
+
+  <ol class="practice-list">
+    {
+      practiceAreas.map((area, index) => (
+        <li>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <p>{area}</p>
+        </li>
+      ))
+    }
+  </ol>
+
+  <div class="workspace-note">
+    <p class="section-label">02 / Where ideas take shape</p>
+    <div>
+      <h2>A home-based, hands-on workspace.</h2>
+      <p>
+        Depending on the piece, making may involve a Cricut Explore 3, heat
+        press and vinyl, or an easel, paints, and a projector used for outlines
+        and references. Resin molds and general art supplies support the other
+        parts of the practice.
+      </p>
+      <p>
+        Paid custom shirt work has already grown through community connections
+        and word of mouth. This website brings the work together as a portfolio,
+        a place to begin custom-work conversations, and eventually a storefront.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-practice {
+    padding: clamp(6rem, 10vw, 11rem)
+      max(1.5rem, calc((100% - var(--page-width)) / 2));
+    background: var(--color-cream);
+  }
+
+  .practice-intro,
+  .workspace-note {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  .section-label {
+    margin: 0.4rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 60rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.6vw, 6.25rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.98;
+  }
+
+  .practice-intro div > p,
+  .workspace-note div > p {
+    max-width: 47rem;
+    margin: 2rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .practice-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: clamp(5rem, 9vw, 9rem) 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-border);
+    list-style: none;
+  }
+
+  .practice-list li {
+    display: grid;
+    grid-template-columns: clamp(3rem, 5vw, 5rem) minmax(0, 1fr);
+    align-items: baseline;
+    min-width: 0;
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 5vw, 5rem)
+      clamp(1.5rem, 3vw, 2.5rem) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .practice-list li:nth-child(even) {
+    padding-right: 0;
+    padding-left: clamp(1.5rem, 5vw, 5rem);
+    border-left: 1px solid var(--color-border);
+  }
+
+  .practice-list span {
+    color: var(--color-taupe);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+
+  .practice-list p {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.65rem, 3vw, 3.25rem);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+
+  .workspace-note {
+    margin-top: clamp(6rem, 11vw, 12rem);
+    padding-top: clamp(3rem, 5vw, 5rem);
+    border-top: 1px solid var(--color-gold);
+  }
+
+  .workspace-note h2 {
+    max-width: 53rem;
+  }
+
+  @media (max-width: 52rem) {
+    .practice-intro,
+    .workspace-note {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .about-practice {
+      padding-inline: 1rem;
+    }
+
+    .practice-list {
+      grid-template-columns: 1fr;
+    }
+
+    .practice-list li,
+    .practice-list li:nth-child(even) {
+      padding: 1.75rem 0;
+      border-left: 0;
+    }
+  }
+</style>

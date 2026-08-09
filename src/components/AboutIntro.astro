@@ -1,0 +1,171 @@
+<section class="about-intro" aria-labelledby="about-title">
+  <div class="intro-copy">
+    <p class="intro-eyebrow">Behind the work</p>
+    <h1 id="about-title">Made by Bre.</h1>
+    <p>
+      Bre is the primary artist and maker behind Breezy's Creative Co., a
+      home-based, online-first creative practice centered on original art,
+      custom work, and handmade pieces.
+    </p>
+  </div>
+
+  <figure class="portrait-placeholder">
+    <div aria-hidden="true">
+      <span>Portrait / studio photograph</span>
+    </div>
+    <figcaption>Future photograph of Bre at work</figcaption>
+  </figure>
+
+  <img
+    class="bird-accent"
+    src="/images/brand/breezys-bird-accent.png"
+    alt=""
+    width="274"
+    height="343"
+  />
+</section>
+
+<style>
+  .about-intro {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
+    align-items: center;
+    width: min(100% - 3rem, var(--page-width));
+    min-height: min(58rem, calc(100vh - 7.75rem));
+    margin-inline: auto;
+    padding-block: clamp(5rem, 9vw, 9rem);
+    gap: clamp(4rem, 10vw, 12rem);
+  }
+
+  .intro-copy {
+    position: relative;
+    z-index: 1;
+  }
+
+  .intro-eyebrow {
+    margin: 0 0 clamp(1.5rem, 3vw, 3rem);
+    color: var(--color-charcoal);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(4.5rem, 9vw, 10.5rem);
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 0.88;
+  }
+
+  .intro-copy > p:last-child {
+    max-width: 40rem;
+    margin: clamp(2.5rem, 5vw, 4.5rem) 0 0 clamp(0rem, 5vw, 6rem);
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--color-gold);
+    color: var(--color-charcoal);
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.8;
+  }
+
+  .portrait-placeholder {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 31rem);
+    margin: 0;
+    justify-self: end;
+    transform: rotate(0.65deg);
+  }
+
+  .portrait-placeholder > div {
+    display: grid;
+    aspect-ratio: 4 / 5;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    place-items: center;
+    color: var(--color-charcoal);
+    background:
+      linear-gradient(
+        145deg,
+        transparent 49.8%,
+        rgb(85 81 74 / 9%) 49.8% 50.2%,
+        transparent 50.2%
+      ),
+      linear-gradient(
+        35deg,
+        transparent 49.8%,
+        rgb(85 81 74 / 7%) 49.8% 50.2%,
+        transparent 50.2%
+      ),
+      linear-gradient(135deg, var(--color-blush-soft), var(--color-cream));
+    box-shadow: 0 1.5rem 3rem rgb(55 45 34 / 7%);
+  }
+
+  .portrait-placeholder span {
+    padding: 0.6rem 0.8rem;
+    border-block: 1px solid var(--color-taupe);
+    background: rgb(251 248 241 / 82%);
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+
+  figcaption {
+    margin-top: 1rem;
+    color: var(--color-charcoal);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .bird-accent {
+    position: absolute;
+    z-index: 2;
+    right: clamp(16rem, 27vw, 31rem);
+    bottom: clamp(3rem, 7vw, 7rem);
+    width: clamp(4.5rem, 6vw, 6.5rem);
+    height: auto;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @media (max-width: 62rem) {
+    .about-intro {
+      grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.65fr);
+      min-height: auto;
+      gap: 4rem;
+    }
+
+    .bird-accent {
+      display: none;
+    }
+  }
+
+  @media (max-width: 46rem) {
+    .about-intro {
+      grid-template-columns: 1fr;
+      width: min(100% - 2rem, var(--page-width));
+      padding-block: 4.5rem 5rem;
+      gap: 3.5rem;
+    }
+
+    h1 {
+      font-size: clamp(4rem, 20vw, 6rem);
+    }
+
+    .intro-copy > p:last-child {
+      margin-left: 0;
+    }
+
+    .portrait-placeholder {
+      width: min(82vw, 23rem);
+      justify-self: center;
+    }
+  }
+</style>
