@@ -1,306 +1,243 @@
-# Breezy's Creative Co. Design
+# Crafty Design
 
-## Status
+## Naming
 
-The current homepage wireframe direction is approved.
-
-The wireframe is a visual and compositional reference, not a source of business
-facts. Placeholder prices, events, newsletter content, policies, locations, or
-other unapproved content shown in a wireframe must not be treated as factual.
+- `Crafty` is the internal project/repository name.
+- `Breezy's Creative Co.` is the public-facing business/brand name.
 
 ## Brand goals
 
 - Professional, but clearly artist/maker-led.
-- Showcase artwork as seriously as products for sale.
-- Feel personal and handmade without looking amateur.
-- Feel expressive without becoming visually chaotic.
-- Avoid looking like a generic ecommerce template.
-- Give Breezy's varied body of work a coherent visual home without forcing all
-  artwork into one aesthetic.
+- Warm, handmade, feminine, and editorial.
+- The site should showcase artwork as seriously as it sells products.
+- The site should feel like a real creative brand, not a generic ecommerce template.
 
-## Public brand
+## Brand personality
 
-- Customer-facing business name: **Breezy's Creative Co.**
-- `crafty` is only the internal repository/project name.
-- Public-facing copy and metadata should use Breezy's Creative Co.
+- Handmade
+- Soft
+- Thoughtful
+- Personal
+- Elegant
+- Artistic
+- Welcoming
 
 ## Logo
 
-- The official Breezy's Creative Co. logo is the primary brand mark.
-- Do not invent or substitute another logo.
-- The current logo contains:
-  - large scissors as the central symbol
-  - detailed botanical vines and flowers
-  - a small illustrated bird
-  - black line-art styling
-  - an elegant high-contrast serif wordmark
-- The logo should inform the site's visual language without being repeated
-  excessively.
-- A PNG logo is currently available.
-- A vector or transparent high-resolution production asset may be obtained later.
+- The official Breezy's Creative Co. logo is the foundation of the visual identity.
+- The logo may be creatively refined and extended as long as the direction remains recognizably rooted in the current brand:
+  - scissor-based central mark
+  - botanical/floral linework
+  - delicate illustrative details
+  - elegant wordmark
+- Decorative accent illustrations inspired by the logo are allowed and encouraged.
+- Future logo cleanup should aim for a cleaner production-ready asset, ideally with transparency.
+- Do not replace the brand with an unrelated or generic logo system.
 
-## Overall visual direction
+## Approved visual direction
 
-The approved direction is a contemporary maker's atelier with editorial
-presentation.
+The approved visual direction is:
 
-The site should combine:
+- warm paper/cream backgrounds
+- dark ink typography
+- delicate botanical line art
+- editorial spacing
+- elegant serif-led presentation
+- subtle soft color accents
+- professional layout clarity
 
-- warm paper-like surfaces
-- black or near-black ink
-- refined serif typography
-- clean supporting sans-serif typography
-- botanical line-art details
-- generous whitespace
-- asymmetrical editorial composition
-- layered photography
-- restrained handmade details
-- clear ecommerce and navigation patterns
+This direction should feel elevated and artistic, while still being usable for shopping and inquiries.
 
-The result should feel like an artist's studio, portfolio, and professional
-storefront living within the same visual system.
+## Color direction
 
-## Color
+Current approved palette direction:
 
-Use a restrained neutral foundation so Breezy's artwork and products provide
-much of the site's color.
+- Paper / background: warm cream
+- Secondary background: soft beige
+- Primary text: dark ink / charcoal
+- Accent 1: dusty rose / blush
+- Accent 2: muted sage
+- Accent 3: warm gold / tan
 
-Starting palette direction:
+Suggested working palette for implementation:
 
-- warm paper / ivory
-- soft cream
-- charcoal / near-black
-- muted warm gray
-- soft taupe or natural beige
+- `--color-bg: #f5f0e7`
+- `--color-bg-soft: #ebe4d8`
+- `--color-surface: #f8f4ec`
+- `--color-text: #1f1a17`
+- `--color-muted: #6f6257`
+- `--color-line: #d7cfc2`
+- `--color-blush: #d9b8ae`
+- `--color-sage: #a7ae91`
+- `--color-gold: #b9986b`
 
-Exact final color values may continue to be refined during implementation.
-
-Do not establish a loud brand palette that competes with the artwork.
+These values are working implementation values, not eternal law.
 
 ## Typography
 
-Typography should feel editorial and refined.
+Typography should follow an editorial hierarchy:
 
-Direction:
+- Display/headline type:
+  - elegant, high-contrast serif feeling
+  - artistic and premium
+- Supporting UI/navigation type:
+  - restrained, clean, readable
+  - slightly letterspaced small caps / uppercase styling is acceptable
+- Body copy:
+  - readable, calm, and not overly stylized
 
-- high-contrast or elegant serif for major headings and display text
-- highly readable sans-serif for body copy, navigation, controls, and product UI
-- limited use of italic or handwritten-feeling accents may be considered for
-  small editorial annotations
+Current direction:
 
-Do not use decorative typography so heavily that readability suffers.
+- serif-led headlines
+- restrained supporting text
+- readable body text
+- generous whitespace
 
-Exact production typefaces remain TBD.
+Exact production font choices are still flexible.
 
 ## Graphic language
 
-Approved visual motifs include:
+The approved graphic language includes:
 
-- botanical line illustrations inspired by the official logo
-- fine rules and delicate borders
-- restrained scissors/cutting references
-- subtle paper or print texture
-- editorial framing
-- overlapping or layered image compositions
-- elegant asymmetry
-- generous whitespace
+- fine botanical line illustrations
+- floral and branch motifs
+- delicate bird accents where appropriate
+- light ornamental dividers
+- framed/overlapped image compositions
+- subtle layered-paper or editorial collage cues
 
-Decorative elements should frame and support Breezy's work rather than compete
-with it.
-
-Do not invent new botanical illustrations that attempt to replace the official
-logo artwork unless explicitly approved.
+Graphic decoration must support the brand and never make the site confusing to use.
 
 ## Photography
 
-Real work should provide most of the visual color and personality.
+Photography should feel:
 
-Photography direction:
+- warm
+- soft
+- natural-light driven
+- handmade
+- personal
+- editorial rather than commercial-stock
 
-- use real photographs of Breezy's work whenever possible
-- thoughtfully staged props are appropriate when they support the piece
-- avoid props that overwhelm the subject
-- portfolio images may use varied aspect ratios
-- editorial or masonry-style compositions are appropriate for portfolio work
-- shop/product photography should be more consistent and structured
-- existing photography may be used as design reference even when final
-  production photography will later be improved
+Preferred photo subjects include:
 
-Do not use generic stock craft photography as a substitute for Breezy's work.
+- finished products
+- works in progress
+- painting process
+- art tools/workspace
+- styled product shots
+- close-up detail shots
 
-## Header and navigation
+Photography should help communicate that this is a real maker business run by a real person.
 
-The desktop header should feel balanced and editorial.
+## Homepage
 
-Primary navigation:
+The homepage should communicate all three business functions clearly:
 
-- Portfolio
-- Commissions
-- Shop
-- About
-- Contact
+1. Artist portfolio
+2. Commission/custom-work lead generation
+3. Ready-to-buy storefront
 
-The official logo should occupy a prominent central brand position on desktop
-when space allows.
+Homepage priorities:
 
-Do not add cart/account controls until actual ecommerce functionality requires
-them.
+- establish brand identity quickly
+- show the maker/artistic character of the business
+- present portfolio and custom work as first-class offerings
+- preserve a clean route into shopping
+- include a visible human/artist presence
 
-Mobile navigation should prioritize clarity and conventional usability.
-
-## Homepage hierarchy
-
-The approved homepage order is:
+Recommended homepage section order:
 
 1. Header / navigation
 2. Hero
-3. Selected Work
-4. Commissions / custom work
-5. Shop preview
+3. What Breezy's Creative Co. makes
+4. Portfolio preview
+5. Commission/custom-work section
 6. About Bre
-7. Footer
+7. Shop preview
+8. Footer with helpful links / contact / newsletter
 
-Portfolio appears before the shop intentionally.
+## Portfolio
 
-The homepage should first establish Breezy as an artist/maker, then make the
-commission and purchase paths clear.
+The portfolio should be treated seriously and not as an afterthought.
 
-## Hero
+It should support showcasing work such as:
 
-The hero should use an asymmetric editorial composition.
+- paintings
+- shirts
+- resin work
+- accessories / bracelets
+- other handmade pieces
 
-Direction:
-
-- large serif-led statement on the left
-- layered photographs of real work on the right
-- restrained botanical detail around the composition
-- generous whitespace
-- clear calls to action
-
-Approved headline direction:
-
-**Original art, custom work, and handmade pieces.**
-
-Supporting copy should communicate that visitors can:
-
-- explore Breezy's work
-- browse ready-made pieces
-- request something custom
-
-Primary calls to action:
-
-- Explore the Work
-- Request a Commission
-
-Do not invent claims, locations, turnaround times, pricing, or policies in hero
-copy.
-
-## Selected Work
-
-This is a portfolio preview, not a product grid.
-
-Direction:
-
-- editorial image arrangement
-- varied image dimensions are encouraged
-- some work may be sold, commissioned, archived, gifted, or simply displayed
-- a piece does not need to be for sale to belong here
-- link to the full Portfolio
-
-The section should make Breezy's body of work feel substantial even when the
-ready-made shop inventory is small.
+Portfolio presentation should feel curated and visually clean.
 
 ## Commissions
 
-The commissions section should feel warm and inviting rather than transactional.
+The commissions area should make it easy to understand that custom work is welcome.
 
-Purpose:
+Likely commission/custom-work emphasis includes:
 
-- communicate that customers can bring Breezy an idea
-- show custom shirts, paintings, and other approved personalized work
-- encourage a conversation before requiring a purchase
+- custom shirts
+- paintings
+- selected personalized handmade items
 
-Primary call to action:
+The commission area should feel approachable and professional, not intimidating.
 
-- Start a Commission
+## Shop
 
-Do not publish unapproved turnaround times, pricing formulas, deposits, revision
-policies, or guarantees.
+The shop should remain clear and usable.
 
-## Shop preview
+Ready-made products may include things like:
 
-The Shop should be visually cleaner and more structured than the Portfolio.
+- shirts
+- resin pieces
+- coasters
+- bracelets
+- other finished handmade work
 
-Direction:
-
-- consistent product cards
-- clear product imagery
-- product name
-- price only when real pricing exists
-- obvious link to the full Shop
-
-The Shop contains ready-to-buy work.
-
-Do not fill empty inventory with fake products.
+Storefront usability must remain clear even when the design is expressive.
 
 ## About Bre
 
-The homepage should introduce Bre as the artist/maker behind the work.
+The artist/maker should be visible in the brand.
 
-Direction:
+The site should include an About Bre area that reinforces:
 
-- real portrait or making/process photography when available
-- concise personal introduction
-- warm and human rather than corporate
-- link to a fuller About page if appropriate
-
-Do not invent biography, credentials, personal history, or quotes.
+- handmade origin
+- artistic personality
+- personal nature of the business
+- trust and authenticity
 
 ## Footer
 
-The footer should reinforce the brand while remaining useful.
+The footer can carry more decorative brand character than the header, while remaining usable.
 
-Potential content:
+It should eventually support:
 
-- official logo
-- primary navigation
-- contact path
-- portfolio
-- commissions
-- shop
-- legal links when real policies exist
-
-Newsletter signup, event links, social accounts, policy links, and other features
-should only appear when those things actually exist.
+- navigation
+- contact entry points
+- social/community links
+- newsletter signup if used
+- policy links when those are decided
 
 ## Responsive behavior
 
-The mobile experience must preserve:
+Responsive behavior should preserve clarity first.
 
-- clear navigation
-- readable typography
-- strong image hierarchy
-- obvious commission and portfolio calls to action
-- straightforward shopping behavior
+Requirements:
 
-Layered desktop photography should simplify gracefully on smaller screens rather
-than creating overlap or horizontal overflow.
-
-Decorative botanical elements may be reduced or removed on smaller screens when
-necessary.
+- mobile must remain readable and not feel cramped
+- large editorial typography may scale down or rewrap intentionally
+- decorative image compositions may simplify on smaller screens
+- navigation must remain usable on small screens
+- image overlap/collage effects should never break layout or obscure critical text/buttons
 
 ## Explicitly rejected directions
 
 - A generic corporate ecommerce-template feel
 - An excessively flat visual direction
 - An excessively dark visual direction
-- A loud rainbow craft-store aesthetic
-- A rustic farmhouse aesthetic
-- A generic pastel Etsy-boutique aesthetic
-- An invented replacement for the official Breezy's Creative Co. logo
-- Treating `Crafty` as the public-facing brand
-- Excessive fake tape, torn paper, stickers, or craft props used purely for
-  decoration
-- Forcing all of Breezy's artwork into one narrow visual aesthetic
+- An invented replacement brand unrelated to Breezy's Creative Co.
 - Expressive graphic design that makes storefront usability unclear
-- Stock photography used in place of real work
+- Overly cluttered decoration
+- Cold, sterile, tech-looking presentation

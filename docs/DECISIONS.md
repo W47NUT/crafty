@@ -41,3 +41,10 @@
 - The visual system will use a warm neutral editorial foundation, layered real
   photography, botanical/scissors influences from the official logo, and clear
   conventional storefront interactions.
+
+- `Crafty` remains the internal repository/project name, while `Breezy's Creative Co.` is the public-facing business name.
+- The approved brand direction is warm, handmade, feminine, editorial, and professional.
+- The approved visual language includes warm paper/cream tones, dark ink typography, delicate botanical illustration, and subtle decorative accents.
+- The logo may be creatively refined and extended as long as it remains recognizably rooted in the current Breezy's Creative Co. identity.
+- Decorative accents derived from the logo's floral/botanical/bird language are approved for use across the site.
+- The homepage should prioritize brand identity, portfolio visibility, commissions/custom work, and shopping in that order rather than behaving like a generic storefront.
