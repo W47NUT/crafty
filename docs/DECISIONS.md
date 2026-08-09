@@ -25,3 +25,10 @@
 - Undecided business and design matters will remain explicitly unknown or TBD
   until a decision is made- The website will serve as an artist portfolio, a source of
   commission/custom-work leads, and a storefront for ready-to-buy work..
+- `crafty` is the internal repository/project name only. The customer-facing
+  business and brand name is **Breezy's Creative Co.**
+- Public-facing website copy, branding, and metadata will use Breezy's Creative
+  Co.
+- The current visual direction is a restrained, editorial maker/atelier style
+  informed by the official botanical scissors logo, with neutral foundations
+  that allow the artwork itself to provide much of the color.

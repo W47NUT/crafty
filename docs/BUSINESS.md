@@ -1,5 +1,13 @@
 # Crafty Business Facts
 
+Internal project/repository name: `crafty`
+
+Customer-facing business name: **Breezy's Creative Co.**
+
+Public website copy, branding, metadata, and customer-facing references should
+use **Breezy's Creative Co.** unless a technical context specifically refers to
+the repository/project.
+
 ## Business model
 
 Crafty is a home-based, online-first artist and maker business.
