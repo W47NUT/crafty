@@ -1,0 +1,166 @@
+<section class="about-section" id="about" aria-labelledby="about-heading">
+  <div class="about-image">
+    <div class="image-placeholder">
+      <span>Portrait or studio photo</span>
+    </div>
+  </div>
+  <img
+    class="about-bird"
+    src="/images/brand/breezys-bird-accent.png"
+    alt=""
+    width="274"
+    height="343"
+    loading="lazy"
+  />
+  <div class="about-copy">
+    <p class="section-eyebrow">Behind the work</p>
+    <h2 id="about-heading">Meet Bre</h2>
+    <p>
+      Bre is the primary artist and maker behind Breezy's Creative Co., a
+      home-based creative business built around original art, custom work, and
+      handmade pieces.
+    </p>
+    <p>
+      Current work spans shirts, paintings, molded resin pieces, D&D dice,
+      beach-sand and shell coasters, and bead bracelets.
+    </p>
+    <a class="text-link" href="#about">Read Bre's Story</a>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(20rem, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    padding-block: clamp(5rem, 10vw, 10rem);
+    gap: clamp(3rem, 9vw, 10rem);
+  }
+
+  .about-image {
+    height: clamp(31rem, 48vw, 46rem);
+    padding: clamp(0.65rem, 1vw, 1rem);
+    border: 1px solid var(--color-border);
+    background: var(--color-cream);
+    transform: rotate(-0.7deg);
+  }
+
+  .image-placeholder {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-height: 12rem;
+    place-items: center;
+    color: var(--color-charcoal);
+    background:
+      linear-gradient(
+        145deg,
+        transparent 49%,
+        rgb(91 78 63 / 7%) 49% 50%,
+        transparent 50%
+      ),
+      linear-gradient(35deg, var(--color-border), var(--color-cream));
+  }
+
+  .image-placeholder span {
+    padding: 0.45rem;
+    border-bottom: 1px solid var(--color-taupe);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 0.05em;
+  }
+
+  .about-copy {
+    max-width: 42rem;
+  }
+
+  .section-eyebrow {
+    margin: 0 0 1rem;
+    color: var(--color-charcoal);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 4.5vw, 5.25rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .about-bird {
+    position: absolute;
+    top: calc(50% - 11rem);
+    right: 1rem;
+    width: clamp(4.5rem, 5.5vw, 6rem);
+    height: auto;
+    opacity: 0.48;
+    pointer-events: none;
+  }
+
+  .about-copy > p {
+    margin: 1.75rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .text-link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid var(--color-ink);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .text-link:hover {
+    background: var(--color-cream);
+  }
+
+  @media (max-width: 62rem) {
+    .about-section {
+      grid-template-columns: 1fr;
+    }
+
+    .about-copy {
+      max-width: 48rem;
+    }
+
+    .about-bird {
+      display: none;
+    }
+
+    .about-image {
+      width: min(100%, 40rem);
+      height: min(100vw, 38rem);
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .about-section {
+      width: min(100% - 2rem, var(--page-width));
+    }
+
+    .image-placeholder span {
+      max-width: 8rem;
+      text-align: center;
+    }
+
+    .about-image {
+      height: min(120vw, 32rem);
+    }
+  }
+</style>

@@ -11,6 +11,13 @@ Crafty is an arts-and-crafts ecommerce website.
 - pnpm is the package manager.
 - The development environment is provided through Nix and direnv.
 
+Prefer meaningful component-based development. Page files should compose
+section and shared components, with major reusable or conceptual sections in
+`src/components`. Do not create components for trivial markup solely to reduce
+line count. Keep static content in Astro and use Svelte only when real
+client-side interactivity warrants it. Favor simple, readable code that the
+repository owner can inspect and edit.
+
 ## Code Style
 
 Keep the code understandable to a human developer who is still learning and

@@ -1,9 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutBre from "../components/AboutBre.astro";
+import CommissionSection from "../components/CommissionSection.astro";
 import HeroSection from "../components/HeroSection.astro";
-import HomepageContent from "../components/HomepageContent.astro";
+import SelectedWork from "../components/SelectedWork.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import WhatBreMakes from "../components/WhatBreMakes.astro";
 ---
 
 <BaseLayout
@@ -13,7 +16,10 @@ import SiteHeader from "../components/SiteHeader.astro";
   <SiteHeader />
   <main id="main-content">
     <HeroSection />
-    <HomepageContent />
+    <WhatBreMakes />
+    <SelectedWork />
+    <CommissionSection />
+    <AboutBre />
   </main>
   <SiteFooter />
 </BaseLayout>

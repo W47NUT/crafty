@@ -48,3 +48,7 @@
 - The logo may be creatively refined and extended as long as it remains recognizably rooted in the current Breezy's Creative Co. identity.
 - Decorative accents derived from the logo's floral/botanical/bird language are approved for use across the site.
 - The homepage should prioritize brand identity, portfolio visibility, commissions/custom work, and shopping in that order rather than behaving like a generic storefront.
+
+- Crafty/Breezy's will use a component-oriented Astro architecture: pages will
+  compose meaningful section and shared components, while Svelte will be
+  reserved for genuine client-side interactivity.

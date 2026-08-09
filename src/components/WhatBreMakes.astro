@@ -1,0 +1,194 @@
+---
+const makingCategories = [
+  {
+    number: "01",
+    name: "Shirts",
+    description:
+      "Heat-transfer-vinyl T-shirts, including custom work handled through commission inquiries.",
+    accent: "blush",
+  },
+  {
+    number: "02",
+    name: "Paintings",
+    description:
+      "Original paintings for the portfolio, with custom paintings welcomed through commission inquiries.",
+    accent: "sage",
+  },
+  {
+    number: "03",
+    name: "Resin Pieces",
+    description:
+      "Molded epoxy-resin work, including D&D dice and beach-sand and shell coasters.",
+    accent: "gold",
+  },
+  {
+    number: "04",
+    name: "Accessories",
+    description: "Bead bracelets made as part of Bre's range of handmade work.",
+    accent: "taupe",
+  },
+];
+---
+
+<section class="makes-section" aria-labelledby="makes-heading">
+  <div class="section-introduction">
+    <p class="section-eyebrow">Made by Bre</p>
+    <h2 id="makes-heading">What Bre Makes</h2>
+    <p>
+      Breezy's Creative Co. brings wearable, painted, resin, and beaded work
+      together in one creative practice.
+    </p>
+  </div>
+
+  <div class="category-list">
+    {
+      makingCategories.map((category) => (
+        <article class={`category-card category-card-${category.accent}`}>
+          <span class="category-number" aria-hidden="true">
+            {category.number}
+          </span>
+          <h3>{category.name}</h3>
+          <p>{category.description}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .makes-section {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.7fr) minmax(0, 1.3fr);
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    padding-block: clamp(5rem, 9vw, 9rem);
+    gap: clamp(3rem, 7vw, 8rem);
+  }
+
+  .section-introduction {
+    max-width: 31rem;
+  }
+
+  .section-eyebrow {
+    margin: 0 0 1rem;
+    color: var(--color-charcoal);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 4.5vw, 5.25rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .section-introduction > p:last-child {
+    margin: 1.75rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid var(--color-border);
+  }
+
+  .category-card {
+    position: relative;
+    min-height: 15rem;
+    padding: 2rem clamp(1.5rem, 3vw, 2.75rem);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  .category-card:nth-child(even) {
+    border-right: 0;
+  }
+
+  .category-card::after {
+    position: absolute;
+    right: -2.5rem;
+    bottom: -3.5rem;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid var(--category-accent);
+    border-radius: 50%;
+    content: "";
+    opacity: 0.6;
+  }
+
+  .category-card-blush {
+    --category-accent: var(--color-blush);
+  }
+
+  .category-card-sage {
+    --category-accent: var(--color-sage);
+  }
+
+  .category-card-gold {
+    --category-accent: var(--color-gold);
+  }
+
+  .category-card-taupe {
+    --category-accent: var(--color-taupe);
+  }
+
+  .category-number {
+    color: var(--category-accent);
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .category-card h3 {
+    margin: 2.25rem 0 0.75rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.3vw, 2.5rem);
+    font-weight: 400;
+  }
+
+  .category-card p {
+    max-width: 25rem;
+    margin: 0;
+    color: var(--color-charcoal);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 62rem) {
+    .makes-section {
+      grid-template-columns: 1fr;
+    }
+
+    .section-introduction {
+      max-width: 48rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .makes-section {
+      width: min(100% - 2rem, var(--page-width));
+    }
+
+    .category-list {
+      grid-template-columns: 1fr;
+    }
+
+    .category-card {
+      min-height: auto;
+      padding-block: 1.75rem;
+      border-right: 0;
+    }
+
+    .category-card h3 {
+      margin-top: 1.25rem;
+    }
+  }
+</style>
