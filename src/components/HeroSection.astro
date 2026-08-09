@@ -17,25 +17,34 @@
     </div>
   </div>
 
-  <div
-    class="hero-collage"
-    aria-label="Reserved space for photographs of Breezy's work"
-  >
-    <!-- Each placeholder can be replaced directly with an img when approved photography is available. -->
+  <div class="hero-collage" role="group" aria-label="Examples of Breezy's work">
     <div class="photo-frame photo-frame-tall">
-      <div class="photo-placeholder" aria-hidden="true">
-        <span>Artwork photo</span>
-      </div>
+      <img
+        class="work-photo work-photo-psalm"
+        src="/images/work/psalm-shirt.webp"
+        alt="White shirt with Psalm 46:5 floral cross design"
+        width="3000"
+        height="2259"
+        fetchpriority="high"
+      />
     </div>
     <div class="photo-frame photo-frame-wide">
-      <div class="photo-placeholder" aria-hidden="true">
-        <span>Artwork photo</span>
-      </div>
+      <img
+        class="work-photo work-photo-pouch"
+        src="/images/work/beauty-pouch.webp"
+        alt='Cosmetic pouch with "When you think of beautiful things..." design'
+        width="3000"
+        height="2259"
+      />
     </div>
     <div class="photo-frame photo-frame-small">
-      <div class="photo-placeholder" aria-hidden="true">
-        <span>Artwork photo</span>
-      </div>
+      <img
+        class="work-photo work-photo-proverbs"
+        src="/images/work/proverbs-shirt.webp"
+        alt="White shirt with Proverbs 5:1-2 design and blue cross"
+        width="1547"
+        height="1314"
+      />
     </div>
   </div>
 </section>
@@ -164,30 +173,23 @@
     box-shadow: 0 1rem 2.5rem rgb(55 45 34 / 10%);
   }
 
-  .photo-placeholder {
-    display: grid;
+  .work-photo {
+    display: block;
     width: 100%;
     height: 100%;
-    place-items: center;
-    overflow: hidden;
-    color: var(--color-charcoal);
-    background:
-      linear-gradient(
-        145deg,
-        transparent 0 48%,
-        rgb(91 78 63 / 7%) 48% 49%,
-        transparent 49%
-      ),
-      linear-gradient(35deg, var(--color-border), var(--color-cream));
+    object-fit: cover;
   }
 
-  .photo-placeholder span {
-    padding: 0.5rem;
-    border-bottom: 1px solid var(--color-taupe);
-    font-family: var(--font-display);
-    font-size: 0.85rem;
-    font-style: italic;
-    letter-spacing: 0.06em;
+  .work-photo-psalm {
+    object-position: 58% center;
+  }
+
+  .work-photo-pouch {
+    object-position: center 60%;
+  }
+
+  .work-photo-proverbs {
+    object-position: 48% center;
   }
 
   .photo-frame-tall {
@@ -310,6 +312,14 @@
       width: 36%;
       height: 31%;
       transform: rotate(0.9deg);
+    }
+
+    .work-photo-psalm {
+      object-position: 61% center;
+    }
+
+    .work-photo-pouch {
+      object-position: 52% 62%;
     }
   }
 

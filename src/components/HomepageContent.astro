@@ -77,22 +77,34 @@ const makingCategories = [
   <div
     class="portfolio-grid"
     role="group"
-    aria-label="Portfolio photography placeholders"
+    aria-label="Selected work photography"
   >
     <div class="portfolio-item portfolio-item-featured">
-      <div class="image-placeholder">
-        <span>Featured work photo</span>
-      </div>
+      <img
+        src="/images/work/sugar-spice-tote.webp"
+        alt='Custom tote bag with "Sugar Spice & Everything Nice" design'
+        width="2235"
+        height="2023"
+        loading="lazy"
+      />
     </div>
     <div class="portfolio-item portfolio-item-tall">
-      <div class="image-placeholder">
-        <span>Artwork detail photo</span>
-      </div>
+      <img
+        src="/images/work/psalm-shirt.webp"
+        alt="White shirt with Psalm 46:5 floral cross design"
+        width="3000"
+        height="2259"
+        loading="lazy"
+      />
     </div>
     <div class="portfolio-item portfolio-item-wide">
-      <div class="image-placeholder">
-        <span>Finished work photo</span>
-      </div>
+      <img
+        src="/images/work/beauty-pouch.webp"
+        alt='Cosmetic pouch with "When you think of beautiful things..." design'
+        width="3000"
+        height="2259"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>
@@ -324,6 +336,25 @@ const makingCategories = [
     transform: rotate(-0.3deg);
   }
 
+  .portfolio-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .portfolio-item-featured img {
+    object-position: center;
+  }
+
+  .portfolio-item-tall img {
+    object-position: 58% center;
+  }
+
+  .portfolio-item-wide img {
+    object-position: center 62%;
+  }
+
   .image-placeholder {
     display: grid;
     width: 100%;
@@ -507,8 +538,8 @@ const makingCategories = [
     }
 
     .portfolio-grid {
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-      grid-template-rows: 14rem 12rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: clamp(17rem, 72vw, 21rem) clamp(11rem, 46vw, 14rem);
       height: auto;
       gap: 0.75rem;
     }
@@ -517,9 +548,20 @@ const makingCategories = [
       padding: 0.4rem;
     }
 
+    .portfolio-item-featured {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
     .portfolio-item-tall {
-      width: 88%;
-      margin-left: 5%;
+      width: 92%;
+      margin-left: 0;
+    }
+
+    .portfolio-item-tall img,
+    .portfolio-item-wide img {
+      object-fit: contain;
+      background: var(--color-paper);
     }
 
     .image-placeholder span {
