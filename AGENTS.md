@@ -51,6 +51,8 @@ reason.
 
 ## Business Information
 
+Read `docs/BUSINESS.md` before making business or content assumptions.
+
 Never invent:
 
 - products
@@ -65,6 +67,14 @@ Never invent:
 - customer testimonials
 
 Use placeholders or ask for missing information instead.
+
+## Design
+
+Read `docs/DESIGN.md` before visual implementation.
+
+## Project Decisions
+
+Update `docs/DECISIONS.md` when an explicit, durable project decision is made.
 
 ## Ecommerce
 
