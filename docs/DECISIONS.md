@@ -67,3 +67,6 @@
 - The production public domain is `breezys.net`, with the Cloudflare Worker as
   the application origin. The `workers.dev` address remains available for
   development and fallback access.
+- Contact and commission forms submit to narrow server-side Astro API routes.
+  Resend sends one internal notification with the customer's email as Reply-To;
+  all email credentials remain server-side.

@@ -3,12 +3,11 @@
     <p class="section-label">03 / Begin a conversation</p>
     <h2 id="inquiry-heading">Tell Bre what you have in mind.</h2>
     <p>
-      This form shows the information that will help begin an inquiry. Online
-      submission is not connected yet, so nothing entered here will be sent.
+      Share the details that will help Bre understand your custom-work idea.
     </p>
   </div>
 
-  <form aria-describedby="form-status">
+  <form id="commission-form" aria-describedby="commission-form-status">
     <div class="field-pair">
       <div class="form-field">
         <label for="commission-name">Name</label>
@@ -17,6 +16,8 @@
           name="name"
           type="text"
           autocomplete="name"
+          maxlength="100"
+          required
         />
       </div>
 
@@ -27,6 +28,8 @@
           name="email"
           type="email"
           autocomplete="email"
+          maxlength="254"
+          required
         />
       </div>
     </div>
@@ -34,7 +37,13 @@
     <div class="field-pair">
       <div class="form-field">
         <label for="commission-piece">What would you like made?</label>
-        <input id="commission-piece" name="piece" type="text" />
+        <input
+          id="commission-piece"
+          name="requestedPiece"
+          type="text"
+          maxlength="200"
+          required
+        />
       </div>
 
       <div class="form-field">
@@ -46,20 +55,35 @@
           name="quantity"
           type="text"
           inputmode="numeric"
+          maxlength="50"
         />
       </div>
     </div>
 
     <div class="form-field">
       <label for="commission-idea">Tell Bre about your idea</label>
-      <textarea id="commission-idea" name="idea" rows="7"></textarea>
+      <textarea
+        id="commission-idea"
+        name="idea"
+        rows="7"
+        maxlength="5000"
+        required></textarea>
+    </div>
+
+    <div class="honeypot" aria-hidden="true">
+      <label for="commission-website">Website</label>
+      <input
+        id="commission-website"
+        name="website"
+        type="text"
+        tabindex="-1"
+        autocomplete="off"
+      />
     </div>
 
     <div class="form-action">
-      <button type="button" disabled>Online submission coming soon</button>
-      <p id="form-status">
-        This inquiry form is a preview and is not currently connected.
-      </p>
+      <button type="submit">Send commission inquiry</button>
+      <p id="commission-form-status" role="status" aria-live="polite"></p>
     </div>
   </form>
 </section>
@@ -126,6 +150,15 @@
     min-width: 0;
   }
 
+  .honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
   label {
     display: block;
     margin-bottom: 0.6rem;
@@ -188,7 +221,12 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    cursor: not-allowed;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: wait;
+    opacity: 0.65;
   }
 
   .form-action p {
@@ -197,6 +235,14 @@
     color: var(--color-charcoal);
     font-size: 0.78rem;
     line-height: 1.6;
+  }
+
+  .form-action p[data-state="success"] {
+    color: #3f5d3b;
+  }
+
+  .form-action p[data-state="error"] {
+    color: #8a3f34;
   }
 
   @media (max-width: 62rem) {
@@ -229,3 +275,16 @@
     }
   }
 </style>
+
+<script>
+  import { setupFormSubmission } from "../scripts/submitForm";
+
+  const form = document.querySelector<HTMLFormElement>("#commission-form");
+  if (form) {
+    setupFormSubmission({
+      endpoint: "/api/commission",
+      form,
+      sendingLabel: "Sending…",
+    });
+  }
+</script>

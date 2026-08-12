@@ -7,16 +7,22 @@
     <p class="section-label">02 / General contact</p>
     <h2 id="general-contact-heading">Leave a note for the studio.</h2>
     <p>
-      This form shows what a future general message will include. Online
-      submission is not connected yet, so nothing entered here will be sent.
+      Share a general question about Breezy's Creative Co. or finished work.
     </p>
   </div>
 
-  <form aria-describedby="contact-form-status">
+  <form id="contact-form" aria-describedby="contact-form-status">
     <div class="field-pair">
       <div class="form-field">
         <label for="contact-name">Name</label>
-        <input id="contact-name" name="name" type="text" autocomplete="name" />
+        <input
+          id="contact-name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          maxlength="100"
+          required
+        />
       </div>
 
       <div class="form-field">
@@ -26,26 +32,47 @@
           name="email"
           type="email"
           autocomplete="email"
+          maxlength="254"
+          required
         />
       </div>
     </div>
 
     <div class="form-field">
       <label for="contact-subject">Subject</label>
-      <input id="contact-subject" name="subject" type="text" />
+      <input
+        id="contact-subject"
+        name="subject"
+        type="text"
+        maxlength="120"
+        required
+      />
     </div>
 
     <div class="form-field">
       <label for="contact-message">Message</label>
-      <textarea id="contact-message" name="message" rows="8"></textarea>
+      <textarea
+        id="contact-message"
+        name="message"
+        rows="8"
+        maxlength="5000"
+        required></textarea>
+    </div>
+
+    <div class="honeypot" aria-hidden="true">
+      <label for="contact-website">Website</label>
+      <input
+        id="contact-website"
+        name="website"
+        type="text"
+        tabindex="-1"
+        autocomplete="off"
+      />
     </div>
 
     <div class="form-action">
-      <button type="button" disabled>Online submission coming soon</button>
-      <p id="contact-form-status">
-        This contact form is a preview and is not currently connected. Nothing
-        entered will be sent.
-      </p>
+      <button type="submit">Send message</button>
+      <p id="contact-form-status" role="status" aria-live="polite"></p>
     </div>
   </form>
 </section>
@@ -112,6 +139,15 @@
     min-width: 0;
   }
 
+  .honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
   label {
     display: block;
     margin-bottom: 0.6rem;
@@ -169,7 +205,12 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    cursor: not-allowed;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: wait;
+    opacity: 0.65;
   }
 
   .form-action p {
@@ -178,6 +219,14 @@
     color: var(--color-charcoal);
     font-size: 0.78rem;
     line-height: 1.6;
+  }
+
+  .form-action p[data-state="success"] {
+    color: #3f5d3b;
+  }
+
+  .form-action p[data-state="error"] {
+    color: #8a3f34;
   }
 
   @media (max-width: 62rem) {
@@ -210,3 +259,16 @@
     }
   }
 </style>
+
+<script>
+  import { setupFormSubmission } from "../scripts/submitForm";
+
+  const form = document.querySelector<HTMLFormElement>("#contact-form");
+  if (form) {
+    setupFormSubmission({
+      endpoint: "/api/contact",
+      form,
+      sendingLabel: "Sending…",
+    });
+  }
+</script>
