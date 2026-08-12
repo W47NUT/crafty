@@ -120,6 +120,17 @@ package.
 Do not modify hosting, deployment, domains, DNS, CI/CD, or production
 configuration unless explicitly instructed.
 
+Use the current official Cloudflare documentation and installed Cloudflare
+skills for Cloudflare work. Preserve Astro's static rendering by default and
+opt only narrow server routes into on-demand rendering.
+
+## Server Credentials and API Routes
+
+- Never expose secret values to client-side code.
+- Never commit local Cloudflare credentials or credentials from `.dev.vars` or
+  `.env` files.
+- Keep API routes narrow, explicit, and understandable.
+
 ## Git
 
 Do not commit or push changes unless explicitly instructed.

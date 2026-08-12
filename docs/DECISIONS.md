@@ -52,3 +52,15 @@
 - Crafty/Breezy's will use a component-oriented Astro architecture: pages will
   compose meaningful section and shared components, while Svelte will be
   reserved for genuine client-side interactivity.
+
+## 2026-08-12
+
+- Production will use Cloudflare Workers through the official Astro Cloudflare
+  adapter and Wrangler, rather than a Cloudflare Pages deployment workflow.
+  Astro remains static by default; narrow server endpoints opt out individually
+  with `prerender = false`.
+- Transactional form email will use Resend, and commerce integration is planned
+  around Square.
+- Secrets remain server-side in Cloudflare Worker secrets and local `.dev.vars`;
+  they are never committed or exposed to client code. No Cloudflare storage
+  resource is provisioned until one is explicitly needed.
