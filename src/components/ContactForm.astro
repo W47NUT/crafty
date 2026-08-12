@@ -1,0 +1,212 @@
+<section
+  class="contact-form-section"
+  id="general-contact"
+  aria-labelledby="general-contact-heading"
+>
+  <div class="form-intro">
+    <p class="section-label">02 / General contact</p>
+    <h2 id="general-contact-heading">Leave a note for the studio.</h2>
+    <p>
+      This form shows what a future general message will include. Online
+      submission is not connected yet, so nothing entered here will be sent.
+    </p>
+  </div>
+
+  <form aria-describedby="contact-form-status">
+    <div class="field-pair">
+      <div class="form-field">
+        <label for="contact-name">Name</label>
+        <input id="contact-name" name="name" type="text" autocomplete="name" />
+      </div>
+
+      <div class="form-field">
+        <label for="contact-email">Email</label>
+        <input
+          id="contact-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+        />
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="contact-subject">Subject</label>
+      <input id="contact-subject" name="subject" type="text" />
+    </div>
+
+    <div class="form-field">
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" name="message" rows="8"></textarea>
+    </div>
+
+    <div class="form-action">
+      <button type="button" disabled>Online submission coming soon</button>
+      <p id="contact-form-status">
+        This contact form is a preview and is not currently connected. Nothing
+        entered will be sent.
+      </p>
+    </div>
+  </form>
+</section>
+
+<style>
+  .contact-form-section {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.7fr) minmax(0, 1.3fr);
+    padding: clamp(5rem, 9vw, 10rem)
+      max(1.5rem, calc((100% - var(--page-width)) / 2));
+    background: var(--color-blush-soft);
+    gap: clamp(3rem, 9vw, 10rem);
+    scroll-margin-top: 2rem;
+  }
+
+  .form-intro {
+    max-width: 39rem;
+  }
+
+  .section-label {
+    margin: 0 0 2rem;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5vw, 5.75rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .form-intro > p:last-child {
+    margin: 2rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  form {
+    padding: clamp(1.5rem, 4vw, 4rem);
+    border: 1px solid var(--color-border);
+    background: var(--color-cream);
+    box-shadow: 0 1.5rem 3rem rgb(55 45 34 / 6%);
+  }
+
+  .field-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.25rem, 3vw, 3rem);
+  }
+
+  .field-pair + .form-field,
+  .form-field + .form-field {
+    margin-top: 2rem;
+  }
+
+  .form-field {
+    min-width: 0;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--color-charcoal);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    font: inherit;
+  }
+
+  input {
+    min-height: 3.25rem;
+    padding: 0.65rem 0.85rem;
+  }
+
+  textarea {
+    min-height: 12rem;
+    padding: 0.85rem;
+    resize: vertical;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: var(--color-ink);
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+
+  .form-action {
+    display: flex;
+    align-items: center;
+    margin-top: 2.25rem;
+    gap: 1.25rem;
+  }
+
+  button {
+    min-height: 3.5rem;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid var(--color-charcoal);
+    color: var(--color-charcoal);
+    background: transparent;
+    font: inherit;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: not-allowed;
+  }
+
+  .form-action p {
+    max-width: 23rem;
+    margin: 0;
+    color: var(--color-charcoal);
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 62rem) {
+    .contact-form-section {
+      grid-template-columns: 1fr;
+    }
+
+    .form-intro {
+      max-width: 48rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .contact-form-section {
+      padding-inline: 1rem;
+    }
+
+    .field-pair {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .form-action {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+</style>

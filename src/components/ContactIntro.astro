@@ -1,0 +1,99 @@
+<section class="contact-intro" aria-labelledby="contact-heading">
+  <div class="intro-heading">
+    <p>Get in touch</p>
+    <h1 id="contact-heading">Start a conversation.</h1>
+  </div>
+
+  <div class="intro-copy">
+    <span aria-hidden="true">A note from the studio</span>
+    <p>
+      Have a general question about Breezy's Creative Co. or finished work? This
+      is the place to begin.
+    </p>
+  </div>
+</section>
+
+<style>
+  .contact-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.55fr);
+    min-height: clamp(34rem, 65vh, 48rem);
+    padding: clamp(5rem, 9vw, 10rem)
+      max(1.5rem, calc((100% - var(--page-width)) / 2));
+    border-bottom: 1px solid var(--color-border);
+    gap: clamp(4rem, 9vw, 10rem);
+  }
+
+  .intro-heading {
+    align-self: center;
+  }
+
+  .intro-heading p {
+    margin: 0 0 2rem;
+    color: var(--color-charcoal);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(4.25rem, 8.5vw, 9rem);
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    line-height: 0.88;
+  }
+
+  .intro-copy {
+    align-self: end;
+    padding: 2rem 0 0 clamp(1.5rem, 4vw, 4rem);
+    border-top: 1px solid var(--color-gold);
+  }
+
+  .intro-copy span {
+    color: var(--color-gold);
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .intro-copy p {
+    max-width: 31rem;
+    margin: 1.25rem 0 0;
+    color: var(--color-charcoal);
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    line-height: 1.45;
+  }
+
+  @media (max-width: 52rem) {
+    .contact-intro {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .intro-copy {
+      width: min(100%, 34rem);
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 30rem) {
+    .contact-intro {
+      padding-inline: 1rem;
+      gap: 3.5rem;
+    }
+
+    h1 {
+      font-size: clamp(3.65rem, 18vw, 5rem);
+    }
+
+    .intro-copy {
+      padding-left: 1rem;
+    }
+  }
+</style>

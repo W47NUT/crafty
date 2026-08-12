@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import ContactIntro from "../components/ContactIntro.astro";
+import ContactOptions from "../components/ContactOptions.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+---
+
+<BaseLayout
+  title="Contact | Breezy's Creative Co."
+  description="Get in touch with Breezy's Creative Co. with a general question or begin a custom-work inquiry."
+>
+  <SiteHeader />
+  <main id="main-content">
+    <ContactIntro />
+    <ContactOptions />
+    <ContactForm />
+  </main>
+  <SiteFooter />
+</BaseLayout>

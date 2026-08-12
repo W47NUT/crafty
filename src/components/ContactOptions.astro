@@ -1,0 +1,134 @@
+<section class="contact-options" aria-labelledby="contact-options-heading">
+  <div class="options-heading">
+    <p>01 / Choose a path</p>
+    <h2 id="contact-options-heading">What would you like to talk about?</h2>
+  </div>
+
+  <div class="options-list">
+    <article>
+      <p class="option-number">01</p>
+      <div>
+        <h3>General questions</h3>
+        <p>
+          For questions about Breezy's Creative Co., finished work, or another
+          general inquiry, use the contact form below.
+        </p>
+        <a href="#general-contact">Go to the general contact form</a>
+      </div>
+    </article>
+
+    <article>
+      <p class="option-number">02</p>
+      <div>
+        <h3>Custom work</h3>
+        <p>
+          Already have an idea for something made specifically for you? The
+          commissions page explains what to share and how to begin.
+        </p>
+        <a href="/commissions">Explore custom-work inquiries</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .contact-options {
+    display: grid;
+    grid-template-columns: minmax(17rem, 0.65fr) minmax(0, 1.35fr);
+    padding: clamp(5rem, 9vw, 9rem)
+      max(1.5rem, calc((100% - var(--page-width)) / 2));
+    background: var(--color-cream);
+    gap: clamp(4rem, 9vw, 10rem);
+  }
+
+  .options-heading > p {
+    margin: 0 0 2rem;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 12ch;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 4.5vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+
+  .options-list {
+    border-top: 1px solid var(--color-ink);
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    padding-block: clamp(2.5rem, 5vw, 4.5rem);
+    border-bottom: 1px solid var(--color-border);
+    gap: clamp(1rem, 3vw, 3rem);
+  }
+
+  .option-number {
+    margin: 0;
+    color: var(--color-gold);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  article div > p {
+    max-width: 39rem;
+    margin: 1.25rem 0 0;
+    color: var(--color-charcoal);
+    line-height: 1.8;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-underline-offset: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: var(--color-charcoal);
+  }
+
+  @media (max-width: 52rem) {
+    .contact-options {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      max-width: 15ch;
+    }
+  }
+
+  @media (max-width: 30rem) {
+    .contact-options {
+      padding-inline: 1rem;
+      gap: 3rem;
+    }
+
+    article {
+      grid-template-columns: 2rem 1fr;
+    }
+  }
+</style>
