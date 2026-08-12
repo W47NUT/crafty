@@ -64,3 +64,6 @@
 - Secrets remain server-side in Cloudflare Worker secrets and local `.dev.vars`;
   they are never committed or exposed to client code. No Cloudflare storage
   resource is provisioned until one is explicitly needed.
+- The production public domain is `breezys.net`, with the Cloudflare Worker as
+  the application origin. The `workers.dev` address remains available for
+  development and fallback access.
