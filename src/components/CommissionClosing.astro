@@ -1,0 +1,95 @@
+<section
+  class="commission-closing"
+  aria-labelledby="commission-closing-heading"
+>
+  <p class="section-label">03 / Begin a conversation</p>
+  <div class="closing-copy">
+    <h2 id="commission-closing-heading">Have something in mind?</h2>
+    <p>
+      Send Bre a message with your idea and any useful details. That
+      conversation is the next step in finding out whether the project is a
+      practical fit.
+    </p>
+    <a href="/contact#contact-form">Start a commission inquiry</a>
+  </div>
+</section>
+
+<style>
+  .commission-closing {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    padding: clamp(5rem, 9vw, 10rem)
+      max(1.5rem, calc((100% - var(--page-width)) / 2));
+    background: var(--color-blush-soft);
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  .section-label {
+    margin: 0.35rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .closing-copy {
+    max-width: 58rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 6vw, 7rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.96;
+  }
+
+  .closing-copy p {
+    max-width: 42rem;
+    margin: 2rem 0 0;
+    color: var(--color-charcoal);
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    line-height: 1.8;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+    margin-top: 2.25rem;
+    padding: 0.9rem 1.4rem;
+    border: 1px solid var(--color-ink);
+    color: var(--color-cream);
+    background: var(--color-ink);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: var(--color-ink);
+    background: transparent;
+  }
+
+  @media (max-width: 52rem) {
+    .commission-closing {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .commission-closing {
+      padding-inline: 1rem;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+</style>

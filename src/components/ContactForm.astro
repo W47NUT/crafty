@@ -1,17 +1,18 @@
 <section
   class="contact-form-section"
-  id="general-contact"
-  aria-labelledby="general-contact-heading"
+  id="contact-form"
+  aria-labelledby="contact-form-heading"
 >
   <div class="form-intro">
-    <p class="section-label">02 / General contact</p>
-    <h2 id="general-contact-heading">Leave a note for the studio.</h2>
+    <p class="section-label">02 / Send a message</p>
+    <h2 id="contact-form-heading">Leave a note for the studio.</h2>
     <p>
-      Share a general question about Breezy's Creative Co. or finished work.
+      Share a question, a custom-work idea, or anything else you would like to
+      discuss with Bre.
     </p>
   </div>
 
-  <form id="contact-form" aria-describedby="contact-form-status">
+  <form id="contact-inquiry-form" aria-describedby="contact-form-status">
     <div class="field-pair">
       <div class="form-field">
         <label for="contact-name">Name</label>
@@ -38,15 +39,30 @@
       </div>
     </div>
 
-    <div class="form-field">
-      <label for="contact-subject">Subject</label>
-      <input
-        id="contact-subject"
-        name="subject"
-        type="text"
-        maxlength="120"
-        required
-      />
+    <div class="field-pair">
+      <div class="form-field">
+        <label for="contact-topic">What would you like to talk about?</label>
+        <select id="contact-topic" name="topic" required>
+          <option value="" disabled selected>Select a topic</option>
+          <option value="general">General question</option>
+          <option value="apparel">Apparel</option>
+          <option value="paintings">Paintings</option>
+          <option value="resin">Resin work</option>
+          <option value="accessories">Accessories</option>
+          <option value="other">Other / not sure</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="contact-subject">Subject</label>
+        <input
+          id="contact-subject"
+          name="subject"
+          type="text"
+          maxlength="120"
+          required
+        />
+      </div>
     </div>
 
     <div class="form-field">
@@ -127,15 +143,19 @@
   .field-pair {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end;
     gap: clamp(1.25rem, 3vw, 3rem);
   }
 
+  .field-pair + .field-pair,
   .field-pair + .form-field,
-  .form-field + .form-field {
+  form > .form-field + .form-field {
     margin-top: 2rem;
   }
 
   .form-field {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
   }
 
@@ -159,6 +179,7 @@
   }
 
   input,
+  select,
   textarea {
     display: block;
     width: 100%;
@@ -170,8 +191,13 @@
   }
 
   input {
-    min-height: 3.25rem;
+    height: 3.25rem;
     padding: 0.65rem 0.85rem;
+  }
+
+  select {
+    height: 3.25rem;
+    padding: 0.65rem 2.25rem 0.65rem 0.85rem;
   }
 
   textarea {
@@ -181,6 +207,7 @@
   }
 
   input:focus,
+  select:focus,
   textarea:focus {
     border-color: var(--color-ink);
     outline: 2px solid var(--color-ink);
@@ -188,10 +215,11 @@
   }
 
   .form-action {
-    display: flex;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
     align-items: center;
     margin-top: 2.25rem;
-    gap: 1.25rem;
+    gap: 1.25rem 1.5rem;
   }
 
   button {
@@ -215,6 +243,7 @@
 
   .form-action p {
     max-width: 23rem;
+    min-height: 1.6em;
     margin: 0;
     color: var(--color-charcoal);
     font-size: 0.78rem;
@@ -250,6 +279,7 @@
     }
 
     .form-action {
+      display: flex;
       align-items: stretch;
       flex-direction: column;
     }
@@ -263,7 +293,7 @@
 <script>
   import { setupFormSubmission } from "../scripts/submitForm";
 
-  const form = document.querySelector<HTMLFormElement>("#contact-form");
+  const form = document.querySelector<HTMLFormElement>("#contact-inquiry-form");
   if (form) {
     setupFormSubmission({
       endpoint: "/api/contact",

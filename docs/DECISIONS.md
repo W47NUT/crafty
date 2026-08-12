@@ -67,6 +67,11 @@
 - The production public domain is `breezys.net`, with the Cloudflare Worker as
   the application origin. The `workers.dev` address remains available for
   development and fallback access.
-- Contact and commission forms submit to narrow server-side Astro API routes.
-  Resend sends one internal notification with the customer's email as Reply-To;
-  all email credentials remain server-side.
+- Breezy's uses one universal contact form. Commission pages explain custom work
+  and direct visitors to that form, where a broad topic dropdown categorizes
+  the inquiry.
+- Only `/api/contact` handles website inquiries. Email subjects begin with the
+  selected topic for quick inbox scanning, and the visitor's email remains the
+  Reply-To address.
+- Resend sends one internal notification to Bre for each successful submission.
+  Email credentials remain server-side, and no customer auto-response is sent.

@@ -93,26 +93,6 @@ export function requiredString(
   return trimmedValue;
 }
 
-export function optionalString(
-  body: JsonObject,
-  field: string,
-  label: string,
-  maxLength: number
-) {
-  const value = body[field];
-  if (value === undefined || value === null || value === "") return "";
-  if (typeof value !== "string") {
-    throw new InvalidSubmissionError(`${label} must be text.`);
-  }
-
-  const trimmedValue = value.trim();
-  if (trimmedValue.length > maxLength) {
-    throw new InvalidSubmissionError(`${label} is too long.`);
-  }
-
-  return trimmedValue;
-}
-
 export function emailString(body: JsonObject, field = "email") {
   const email = requiredString(body, field, "Email", 254);
   if (!EMAIL_PATTERN.test(email)) {
