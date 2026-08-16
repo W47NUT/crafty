@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ShopCollection from "../components/ShopCollection.astro";
+import ShopCommissionCallout from "../components/ShopCommissionCallout.astro";
+import ShopFormats from "../components/ShopFormats.astro";
+import ShopIntro from "../components/ShopIntro.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { shopProducts } from "../data/shop-catalog";
+---
+
+<BaseLayout
+  title="Shop | Breezy's Creative Co."
+  description="Learn how Breezy's Creative Co. shop will offer made-to-order pieces and occasional one-of-one work."
+>
+  <SiteHeader />
+  <main id="main-content">
+    <ShopIntro />
+    <ShopCollection products={shopProducts} />
+    <ShopFormats />
+    <ShopCommissionCallout />
+  </main>
+  <SiteFooter />
+</BaseLayout>

@@ -75,3 +75,25 @@
   Reply-To address.
 - Resend sends one internal notification to Bre for each successful submission.
   Email credentials remain server-side, and no customer auto-response is sent.
+
+## 2026-08-16
+
+- The storefront will support two distinct product types: repeatable
+  **made-to-order** products that are made after purchase from established
+  designs and choices, and finished **one-of-one** work that can be available or
+  sold. These labels describe how a shop item is offered; they do not establish
+  any unconfirmed product, option, price, inventory, or turnaround details.
+- True commissions remain outside the normal shop catalog and checkout flow. If
+  Bre must understand an individual request before defining its choices and
+  price, the visitor is directed through `/commissions` to the universal contact
+  form instead.
+- Shop presentation data is centralized in `src/data/shop-catalog.ts` and passed
+  into reusable Astro components. The initial catalog is deliberately empty so
+  sample data cannot be mistaken for live inventory.
+- The current product type is a small, provider-neutral presentation model for
+  storefront cards. Square-specific identifiers, variation structures,
+  inventory mapping, product-detail routes, and checkout behavior are deferred
+  until the real launch catalog and Square integration boundary are confirmed.
+- Still unresolved: launch products, product options and variations, prices,
+  product photography, availability, turnaround times, shipping and return
+  policies, and the exact Square catalog/checkout architecture.

@@ -1,0 +1,145 @@
+---
+import type { ShopProduct } from "../data/shop-catalog";
+import ProductCard from "./ProductCard.astro";
+
+interface Props {
+  products: ShopProduct[];
+}
+
+const { products } = Astro.props;
+---
+
+<section class="shop-collection" aria-labelledby="collection-heading">
+  <div class="collection-heading">
+    <p class="section-label">01 / The collection</p>
+    <div>
+      <h2 id="collection-heading">The storefront is taking shape.</h2>
+      <p>
+        Products will appear here only after their design, choices, price,
+        photography, and availability are confirmed by Bre.
+      </p>
+    </div>
+  </div>
+
+  {
+    products.length > 0 ? (
+      <div class="product-grid">
+        {products.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    ) : (
+      <div class="empty-collection">
+        <p>Collection in preparation</p>
+        <div>
+          <h3>No products are listed for purchase yet.</h3>
+          <span>
+            This space is intentionally empty rather than showing sample items,
+            invented prices, or unconfirmed availability.
+          </span>
+        </div>
+      </div>
+    )
+  }
+</section>
+
+<style>
+  .shop-collection {
+    padding: clamp(5rem, 9vw, 10rem)
+      max(1.5rem, calc((100% - var(--page-width)) / 2));
+    background: var(--color-cream);
+  }
+
+  .collection-heading {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  .section-label,
+  .empty-collection > p {
+    margin: 0;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 56rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.5vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .collection-heading div > p {
+    max-width: 42rem;
+    margin: 2rem 0 0;
+    color: var(--color-charcoal);
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: clamp(4rem, 8vw, 8rem);
+    gap: clamp(2rem, 4vw, 4.5rem);
+  }
+
+  .empty-collection {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    margin-top: clamp(4rem, 8vw, 8rem);
+    padding-block: clamp(2.5rem, 5vw, 5rem);
+    border-top: 1px solid var(--color-gold);
+    border-bottom: 1px solid var(--color-border);
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  .empty-collection h3 {
+    max-width: 44rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+  }
+
+  .empty-collection span {
+    display: block;
+    max-width: 40rem;
+    margin-top: 1.5rem;
+    color: var(--color-charcoal);
+    line-height: 1.75;
+  }
+
+  @media (max-width: 62rem) {
+    .product-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 52rem) {
+    .collection-heading,
+    .empty-collection {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .shop-collection {
+      padding-inline: 1rem;
+    }
+
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

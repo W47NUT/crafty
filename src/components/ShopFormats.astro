@@ -1,0 +1,122 @@
+<section class="shop-formats" aria-labelledby="formats-heading">
+  <div class="formats-heading">
+    <p class="section-label">02 / How the shop works</p>
+    <h2 id="formats-heading">Two ways a piece can enter the shop.</h2>
+  </div>
+
+  <div class="format-list">
+    <article>
+      <p>Made to order</p>
+      <h3>Made after you order.</h3>
+      <span>
+        Established pieces can be offered with clearly defined designs and
+        choices. Bre begins making the physical item after the order is placed.
+      </span>
+    </article>
+
+    <article>
+      <p>One of one</p>
+      <h3>Finished and singular.</h3>
+      <span>
+        An occasional completed piece may be offered as the only one available.
+        Once purchased, that piece will be marked sold.
+      </span>
+    </article>
+  </div>
+</section>
+
+<style>
+  .shop-formats {
+    width: min(100% - 3rem, var(--page-width));
+    margin-inline: auto;
+    padding-block: clamp(5rem, 9vw, 10rem);
+  }
+
+  .formats-heading {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    gap: clamp(2rem, 8vw, 10rem);
+  }
+
+  .section-label,
+  article > p {
+    margin: 0;
+    color: var(--color-charcoal);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 58rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.5vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .format-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: clamp(4rem, 8vw, 8rem);
+    border-top: 1px solid var(--color-border);
+  }
+
+  article {
+    min-width: 0;
+    padding: clamp(2.5rem, 5vw, 5.5rem) clamp(1.5rem, 5vw, 5rem)
+      clamp(3rem, 6vw, 6rem) 0;
+  }
+
+  article + article {
+    padding-left: clamp(1.5rem, 5vw, 5rem);
+    border-left: 1px solid var(--color-border);
+  }
+
+  h3 {
+    margin: clamp(2rem, 4vw, 4rem) 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.7rem, 5vw, 5.75rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  article span {
+    display: block;
+    max-width: 34rem;
+    margin-top: 1.5rem;
+    color: var(--color-charcoal);
+    line-height: 1.75;
+  }
+
+  @media (max-width: 52rem) {
+    .formats-heading {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .shop-formats {
+      width: min(100% - 2rem, var(--page-width));
+    }
+
+    .format-list {
+      grid-template-columns: 1fr;
+    }
+
+    article,
+    article + article {
+      padding: 3rem 0;
+    }
+
+    article + article {
+      border-top: 1px solid var(--color-border);
+      border-left: 0;
+    }
+  }
+</style>

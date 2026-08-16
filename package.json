@@ -11,6 +11,7 @@
     "deploy": "astro build && wrangler deploy",
     "preview": "astro preview",
     "astro": "astro",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
